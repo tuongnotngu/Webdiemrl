@@ -1,0 +1,41 @@
+﻿levantrung‣Repetitions: 6.40
+Repetitions.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "Repetitions.cpp" -pipe -O2 -s -static -lm -x c++ -o"Repetitions.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom42834\
+Dịch thành công.
+
+levantrung‣Repetitions‣Test00: 0.00
+Thời gian ≈ 0.067752500 giây
+Kết quả KHÁC đáp án!
+levantrung‣Repetitions‣Test01: 0.80
+Thời gian ≈ 0.074051500 giây
+Kết quả khớp đáp án!
+levantrung‣Repetitions‣Test02: 0.80
+Thời gian ≈ 0.070123500 giây
+Kết quả khớp đáp án!
+levantrung‣Repetitions‣Test03: 0.00
+Thời gian ≈ 0.061837700 giây
+Kết quả KHÁC đáp án!
+levantrung‣Repetitions‣Test04: 0.80
+Thời gian ≈ 0.200814800 giây
+Kết quả khớp đáp án!
+levantrung‣Repetitions‣Test05: 0.00
+Thời gian ≈ 0.191032100 giây
+Kết quả KHÁC đáp án!
+levantrung‣Repetitions‣Test06: 0.80
+Thời gian ≈ 0.186750200 giây
+Kết quả khớp đáp án!
+levantrung‣Repetitions‣Test07: 0.80
+Thời gian ≈ 0.179744400 giây
+Kết quả khớp đáp án!
+levantrung‣Repetitions‣Test08: 0.00
+Thời gian ≈ 0.189372300 giây
+Kết quả KHÁC đáp án!
+levantrung‣Repetitions‣Test09: 0.80
+Thời gian ≈ 0.082487300 giây
+Kết quả khớp đáp án!
+levantrung‣Repetitions‣Test10: 0.80
+Thời gian ≈ 0.183500800 giây
+Kết quả khớp đáp án!
+levantrung‣Repetitions‣Test11: 0.80
+Thời gian ≈ 0.065362200 giây
+Kết quả khớp đáp án!

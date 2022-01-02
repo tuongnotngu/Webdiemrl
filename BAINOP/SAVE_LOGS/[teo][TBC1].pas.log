@@ -1,0 +1,41 @@
+﻿teo‣TBC1: 10.00
+TBC1.pas
+"C:\Program Files (x86)\Themis\fpc\bin\i386-win32\fpc.exe" -o"TBC1.exe" -O2 -XS -Sg -Cs66060288 "TBC1.pas"|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom30841\
+Free Pascal Compiler version 3.0.4 [2017/10/06] for i386
+Copyright (c) 1993-2017 by Florian Klaempfl and others
+Target OS: Win32 for i386
+Compiling TBC1.pas
+Linking TBC1.exe
+7 lines compiled, 0.2 sec, 36144 bytes code, 2436 bytes data
+Dịch thành công.
+
+teo‣TBC1‣Test01: 1.00
+Thời gian ≈ 0.096695800 giây
+Kết quả khớp đáp án!
+teo‣TBC1‣Test02: 1.00
+Thời gian ≈ 0.063645400 giây
+Kết quả khớp đáp án!
+teo‣TBC1‣Test03: 1.00
+Thời gian ≈ 0.068130100 giây
+Kết quả khớp đáp án!
+teo‣TBC1‣Test04: 1.00
+Thời gian ≈ 0.066065700 giây
+Kết quả khớp đáp án!
+teo‣TBC1‣Test05: 1.00
+Thời gian ≈ 0.066521300 giây
+Kết quả khớp đáp án!
+teo‣TBC1‣Test06: 1.00
+Thời gian ≈ 0.074355900 giây
+Kết quả khớp đáp án!
+teo‣TBC1‣Test07: 1.00
+Thời gian ≈ 0.063561500 giây
+Kết quả khớp đáp án!
+teo‣TBC1‣Test08: 1.00
+Thời gian ≈ 0.063617000 giây
+Kết quả khớp đáp án!
+teo‣TBC1‣Test09: 1.00
+Thời gian ≈ 0.061977600 giây
+Kết quả khớp đáp án!
+teo‣TBC1‣Test10: 1.00
+Thời gian ≈ 0.061217600 giây
+Kết quả khớp đáp án!

@@ -1,0 +1,35 @@
+﻿levantrung‣ABCS: 0.00
+ABCS.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "ABCS.cpp" -pipe -O2 -s -static -lm -x c++ -o"ABCS.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom57329\
+Dịch thành công.
+
+levantrung‣ABCS‣Test00: 0.00
+Thời gian ≈ 0.075239800 giây
+Không thấy file kết quả
+levantrung‣ABCS‣Test01: 0.00
+Thời gian ≈ 0.076811500 giây
+Không thấy file kết quả
+levantrung‣ABCS‣Test02: 0.00
+Thời gian ≈ 0.077603000 giây
+Không thấy file kết quả
+levantrung‣ABCS‣Test03: 0.00
+Thời gian ≈ 0.099362100 giây
+Không thấy file kết quả
+levantrung‣ABCS‣Test04: 0.00
+Thời gian ≈ 0.057169600 giây
+Không thấy file kết quả
+levantrung‣ABCS‣Test05: 0.00
+Thời gian ≈ 0.063737900 giây
+Không thấy file kết quả
+levantrung‣ABCS‣Test06: 0.00
+Thời gian ≈ 0.064232300 giây
+Không thấy file kết quả
+levantrung‣ABCS‣Test07: 0.00
+Thời gian ≈ 0.078426800 giây
+Không thấy file kết quả
+levantrung‣ABCS‣Test08: 0.00
+Thời gian ≈ 0.068816800 giây
+Không thấy file kết quả
+levantrung‣ABCS‣Test09: 0.00
+Thời gian ≈ 0.068116100 giây
+Không thấy file kết quả

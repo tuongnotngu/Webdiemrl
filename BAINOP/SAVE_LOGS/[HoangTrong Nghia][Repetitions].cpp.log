@@ -1,0 +1,41 @@
+﻿HoangTrong Nghia‣Repetitions: 10.00
+Repetitions.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "Repetitions.cpp" -pipe -O2 -s -static -lm -x c++ -o"Repetitions.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom25347\
+Dịch thành công.
+
+HoangTrong Nghia‣Repetitions‣Test00: 1.20
+Thời gian ≈ 0.062876800 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test01: 0.80
+Thời gian ≈ 0.077683200 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test02: 0.80
+Thời gian ≈ 0.072242300 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test03: 0.80
+Thời gian ≈ 0.064578400 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test04: 0.80
+Thời gian ≈ 0.201480700 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test05: 0.80
+Thời gian ≈ 0.182740000 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test06: 0.80
+Thời gian ≈ 0.162174700 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test07: 0.80
+Thời gian ≈ 0.185617600 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test08: 0.80
+Thời gian ≈ 0.182208900 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test09: 0.80
+Thời gian ≈ 0.073805700 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test10: 0.80
+Thời gian ≈ 0.205678700 giây
+Kết quả khớp đáp án!
+HoangTrong Nghia‣Repetitions‣Test11: 0.80
+Thời gian ≈ 0.073626600 giây
+Kết quả khớp đáp án!

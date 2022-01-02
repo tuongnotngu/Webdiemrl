@@ -1,0 +1,35 @@
+﻿ttn-minh‣daisychains: 10.00
+daisychains.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "daisychains.cpp" -pipe -O2 -s -static -lm -x c++ -o"daisychains.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom47627\
+Dịch thành công.
+
+ttn-minh‣daisychains‣Test00: 1.00
+Thời gian ≈ 0.105161400 giây
+Kết quả khớp đáp án!
+ttn-minh‣daisychains‣Test01: 1.00
+Thời gian ≈ 0.077612600 giây
+Kết quả khớp đáp án!
+ttn-minh‣daisychains‣Test02: 1.00
+Thời gian ≈ 0.060823600 giây
+Kết quả khớp đáp án!
+ttn-minh‣daisychains‣Test03: 1.00
+Thời gian ≈ 0.080343700 giây
+Kết quả khớp đáp án!
+ttn-minh‣daisychains‣Test04: 1.00
+Thời gian ≈ 0.074540700 giây
+Kết quả khớp đáp án!
+ttn-minh‣daisychains‣Test05: 1.00
+Thời gian ≈ 0.063651300 giây
+Kết quả khớp đáp án!
+ttn-minh‣daisychains‣Test06: 1.00
+Thời gian ≈ 0.070479000 giây
+Kết quả khớp đáp án!
+ttn-minh‣daisychains‣Test07: 1.00
+Thời gian ≈ 0.067760600 giây
+Kết quả khớp đáp án!
+ttn-minh‣daisychains‣Test08: 1.00
+Thời gian ≈ 0.079305800 giây
+Kết quả khớp đáp án!
+ttn-minh‣daisychains‣Test09: 1.00
+Thời gian ≈ 0.073668500 giây
+Kết quả khớp đáp án!

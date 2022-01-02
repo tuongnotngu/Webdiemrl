@@ -1,0 +1,35 @@
+﻿Hoanghai20006‣DAISYCHAINS: 0.00
+DAISYCHAINS.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "DAISYCHAINS.cpp" -pipe -O2 -s -static -lm -x c++ -o"DAISYCHAINS.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom5660\
+Dịch thành công.
+
+Hoanghai20006‣DAISYCHAINS‣Test00: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom22800\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+Hoanghai20006‣DAISYCHAINS‣Test01: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom7240\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+Hoanghai20006‣DAISYCHAINS‣Test02: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom28571\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+Hoanghai20006‣DAISYCHAINS‣Test03: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom49009\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+Hoanghai20006‣DAISYCHAINS‣Test04: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom37670\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+Hoanghai20006‣DAISYCHAINS‣Test05: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom54200\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+Hoanghai20006‣DAISYCHAINS‣Test06: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom18627\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+Hoanghai20006‣DAISYCHAINS‣Test07: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom2633\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+Hoanghai20006‣DAISYCHAINS‣Test08: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom48624\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+Hoanghai20006‣DAISYCHAINS‣Test09: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom41268\DAISYCHAINS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)

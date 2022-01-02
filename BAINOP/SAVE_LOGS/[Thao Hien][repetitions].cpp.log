@@ -1,0 +1,9 @@
+﻿Thao Hien‣repetitions: ℱ Dịch lỗi
+repetitions.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "repetitions.cpp" -pipe -O2 -s -static -lm -x c++ -o"repetitions.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom45318\
+repetitions.cpp: In function 'int main()':
+repetitions.cpp:12:1: error: expected primary-expression before 'else'
+ else {maxx=max(maxx, dem); dem=1;}
+ ^~~~
+Dịch lỗi!
+

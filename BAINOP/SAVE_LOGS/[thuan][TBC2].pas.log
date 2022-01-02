@@ -1,0 +1,41 @@
+﻿thuan‣TBC2: 10.00
+TBC2.pas
+"C:\Program Files (x86)\Themis\fpc\bin\i386-win32\fpc.exe" -o"TBC2.exe" -O2 -XS -Sg -Cs66060288 "TBC2.pas"|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom20070\
+Free Pascal Compiler version 3.0.4 [2017/10/06] for i386
+Copyright (c) 1993-2017 by Florian Klaempfl and others
+Target OS: Win32 for i386
+Compiling TBC2.pas
+Linking TBC2.exe
+7 lines compiled, 0.1 sec, 36336 bytes code, 2436 bytes data
+Dịch thành công.
+
+thuan‣TBC2‣Test01: 1.00
+Thời gian ≈ 0.067981100 giây
+Kết quả khớp đáp án!
+thuan‣TBC2‣Test02: 1.00
+Thời gian ≈ 0.073145800 giây
+Kết quả khớp đáp án!
+thuan‣TBC2‣Test03: 1.00
+Thời gian ≈ 0.068899300 giây
+Kết quả khớp đáp án!
+thuan‣TBC2‣Test04: 1.00
+Thời gian ≈ 0.071945100 giây
+Kết quả khớp đáp án!
+thuan‣TBC2‣Test05: 1.00
+Thời gian ≈ 0.067714900 giây
+Kết quả khớp đáp án!
+thuan‣TBC2‣Test06: 1.00
+Thời gian ≈ 0.065624600 giây
+Kết quả khớp đáp án!
+thuan‣TBC2‣Test07: 1.00
+Thời gian ≈ 0.066466700 giây
+Kết quả khớp đáp án!
+thuan‣TBC2‣Test08: 1.00
+Thời gian ≈ 0.076783000 giây
+Kết quả khớp đáp án!
+thuan‣TBC2‣Test09: 1.00
+Thời gian ≈ 0.084272600 giây
+Kết quả khớp đáp án!
+thuan‣TBC2‣Test10: 1.00
+Thời gian ≈ 0.101408500 giây
+Kết quả khớp đáp án!

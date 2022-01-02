@@ -1,0 +1,41 @@
+﻿ttn-minh‣repetitions: 10.00
+repetitions.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "repetitions.cpp" -pipe -O2 -s -static -lm -x c++ -o"repetitions.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom19627\
+Dịch thành công.
+
+ttn-minh‣repetitions‣Test00: 1.20
+Thời gian ≈ 0.099491900 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test01: 0.80
+Thời gian ≈ 0.076103100 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test02: 0.80
+Thời gian ≈ 0.089163800 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test03: 0.80
+Thời gian ≈ 0.080775700 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test04: 0.80
+Thời gian ≈ 0.183452800 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test05: 0.80
+Thời gian ≈ 0.342188900 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test06: 0.80
+Thời gian ≈ 0.187249100 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test07: 0.80
+Thời gian ≈ 0.192679600 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test08: 0.80
+Thời gian ≈ 0.184523000 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test09: 0.80
+Thời gian ≈ 0.091684600 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test10: 0.80
+Thời gian ≈ 0.170995200 giây
+Kết quả khớp đáp án!
+ttn-minh‣repetitions‣Test11: 0.80
+Thời gian ≈ 0.073250300 giây
+Kết quả khớp đáp án!

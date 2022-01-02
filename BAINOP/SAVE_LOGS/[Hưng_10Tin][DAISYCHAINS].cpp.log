@@ -1,0 +1,35 @@
+﻿Hưng_10Tin‣DAISYCHAINS: 1.00
+DAISYCHAINS.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "DAISYCHAINS.cpp" -pipe -O2 -s -static -lm -x c++ -o"DAISYCHAINS.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom4676\
+Dịch thành công.
+
+Hưng_10Tin‣DAISYCHAINS‣Test00: 1.00
+Thời gian ≈ 0.065154900 giây
+Kết quả khớp đáp án!
+Hưng_10Tin‣DAISYCHAINS‣Test01: 0.00
+Thời gian ≈ 0.081827300 giây
+Kết quả KHÁC đáp án!
+Hưng_10Tin‣DAISYCHAINS‣Test02: 0.00
+Thời gian ≈ 0.063634800 giây
+Kết quả KHÁC đáp án!
+Hưng_10Tin‣DAISYCHAINS‣Test03: 0.00
+Thời gian ≈ 0.079476200 giây
+Kết quả KHÁC đáp án!
+Hưng_10Tin‣DAISYCHAINS‣Test04: 0.00
+Thời gian ≈ 0.084126200 giây
+Kết quả KHÁC đáp án!
+Hưng_10Tin‣DAISYCHAINS‣Test05: 0.00
+Thời gian ≈ 0.072038300 giây
+Kết quả KHÁC đáp án!
+Hưng_10Tin‣DAISYCHAINS‣Test06: 0.00
+Thời gian ≈ 0.081180200 giây
+Kết quả KHÁC đáp án!
+Hưng_10Tin‣DAISYCHAINS‣Test07: 0.00
+Thời gian ≈ 0.067607900 giây
+Kết quả KHÁC đáp án!
+Hưng_10Tin‣DAISYCHAINS‣Test08: 0.00
+Thời gian ≈ 0.067562400 giây
+Kết quả KHÁC đáp án!
+Hưng_10Tin‣DAISYCHAINS‣Test09: 0.00
+Thời gian ≈ 0.071725700 giây
+Kết quả KHÁC đáp án!

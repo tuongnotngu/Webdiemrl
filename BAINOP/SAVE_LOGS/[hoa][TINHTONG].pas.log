@@ -1,0 +1,41 @@
+﻿hoa‣TINHTONG: 10.00
+TINHTONG.pas
+"C:\Program Files (x86)\Themis\fpc\bin\i386-win32\fpc.exe" -o"TINHTONG.exe" -O2 -XS -Sg -Cs66060288 "TINHTONG.pas"|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom62365\
+Free Pascal Compiler version 3.0.4 [2017/10/06] for i386
+Copyright (c) 1993-2017 by Florian Klaempfl and others
+Target OS: Win32 for i386
+Compiling TINHTONG.pas
+Linking TINHTONG.exe
+5 lines compiled, 0.1 sec, 27248 bytes code, 1268 bytes data
+Dịch thành công.
+
+hoa‣TINHTONG‣Test01: 1.00
+Thời gian ≈ 0.060945900 giây
+Kết quả khớp đáp án!
+hoa‣TINHTONG‣Test02: 1.00
+Thời gian ≈ 0.062392100 giây
+Kết quả khớp đáp án!
+hoa‣TINHTONG‣Test03: 1.00
+Thời gian ≈ 0.063128300 giây
+Kết quả khớp đáp án!
+hoa‣TINHTONG‣Test04: 1.00
+Thời gian ≈ 0.061619800 giây
+Kết quả khớp đáp án!
+hoa‣TINHTONG‣Test05: 1.00
+Thời gian ≈ 0.062844100 giây
+Kết quả khớp đáp án!
+hoa‣TINHTONG‣Test06: 1.00
+Thời gian ≈ 0.063184800 giây
+Kết quả khớp đáp án!
+hoa‣TINHTONG‣Test07: 1.00
+Thời gian ≈ 0.064366700 giây
+Kết quả khớp đáp án!
+hoa‣TINHTONG‣Test08: 1.00
+Thời gian ≈ 0.063474200 giây
+Kết quả khớp đáp án!
+hoa‣TINHTONG‣Test09: 1.00
+Thời gian ≈ 0.061957300 giây
+Kết quả khớp đáp án!
+hoa‣TINHTONG‣Test10: 1.00
+Thời gian ≈ 0.063668300 giây
+Kết quả khớp đáp án!

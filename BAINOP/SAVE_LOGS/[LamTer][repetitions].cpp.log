@@ -1,0 +1,41 @@
+﻿LamTer‣repetitions: 10.00
+repetitions.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "repetitions.cpp" -pipe -O2 -s -static -lm -x c++ -o"repetitions.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom22777\
+Dịch thành công.
+
+LamTer‣repetitions‣Test00: 1.20
+Thời gian ≈ 0.074040500 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test01: 0.80
+Thời gian ≈ 0.063411700 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test02: 0.80
+Thời gian ≈ 0.074780400 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test03: 0.80
+Thời gian ≈ 0.087258300 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test04: 0.80
+Thời gian ≈ 0.095181600 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test05: 0.80
+Thời gian ≈ 0.103010400 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test06: 0.80
+Thời gian ≈ 0.102968000 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test07: 0.80
+Thời gian ≈ 0.101275100 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test08: 0.80
+Thời gian ≈ 0.097548700 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test09: 0.80
+Thời gian ≈ 0.088000800 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test10: 0.80
+Thời gian ≈ 0.089401000 giây
+Kết quả khớp đáp án!
+LamTer‣repetitions‣Test11: 0.80
+Thời gian ≈ 0.072838000 giây
+Kết quả khớp đáp án!

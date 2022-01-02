@@ -1,0 +1,41 @@
+﻿khoa2k6‣repetitions: 9.20
+repetitions.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "repetitions.cpp" -pipe -O2 -s -static -lm -x c++ -o"repetitions.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom694\
+Dịch thành công.
+
+khoa2k6‣repetitions‣Test00: 1.20
+Thời gian ≈ 0.069655200 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test01: 0.80
+Thời gian ≈ 0.070775500 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test02: 0.80
+Thời gian ≈ 0.067167400 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test03: 0.80
+Thời gian ≈ 0.064888500 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test04: 0.80
+Thời gian ≈ 0.197293200 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test05: 0.80
+Thời gian ≈ 0.149407000 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test06: 0.80
+Thời gian ≈ 0.202669200 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test07: 0.80
+Thời gian ≈ 0.167955200 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test08: 0.80
+Thời gian ≈ 0.187937000 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test09: 0.00
+Thời gian ≈ 0.067736700 giây
+Kết quả KHÁC đáp án!
+khoa2k6‣repetitions‣Test10: 0.80
+Thời gian ≈ 0.182062000 giây
+Kết quả khớp đáp án!
+khoa2k6‣repetitions‣Test11: 0.80
+Thời gian ≈ 0.074725200 giây
+Kết quả khớp đáp án!

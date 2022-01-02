@@ -1,0 +1,35 @@
+﻿TRUONG MINH QUANG‣ABCS: 0.00
+ABCS.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "ABCS.cpp" -pipe -O2 -s -static -lm -x c++ -o"ABCS.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom11003\
+Dịch thành công.
+
+TRUONG MINH QUANG‣ABCS‣Test00: 0.00
+Thời gian ≈ 0.085953700 giây
+Không thấy file kết quả
+TRUONG MINH QUANG‣ABCS‣Test01: 0.00
+Thời gian ≈ 0.072579300 giây
+Không thấy file kết quả
+TRUONG MINH QUANG‣ABCS‣Test02: 0.00
+Thời gian ≈ 0.069807900 giây
+Không thấy file kết quả
+TRUONG MINH QUANG‣ABCS‣Test03: 0.00
+Thời gian ≈ 0.094178300 giây
+Không thấy file kết quả
+TRUONG MINH QUANG‣ABCS‣Test04: 0.00
+Thời gian ≈ 0.070592800 giây
+Không thấy file kết quả
+TRUONG MINH QUANG‣ABCS‣Test05: 0.00
+Thời gian ≈ 0.087895400 giây
+Không thấy file kết quả
+TRUONG MINH QUANG‣ABCS‣Test06: 0.00
+Thời gian ≈ 0.065594600 giây
+Không thấy file kết quả
+TRUONG MINH QUANG‣ABCS‣Test07: 0.00
+Thời gian ≈ 0.065714000 giây
+Không thấy file kết quả
+TRUONG MINH QUANG‣ABCS‣Test08: 0.00
+Thời gian ≈ 0.078924000 giây
+Không thấy file kết quả
+TRUONG MINH QUANG‣ABCS‣Test09: 0.00
+Thời gian ≈ 0.062571600 giây
+Không thấy file kết quả

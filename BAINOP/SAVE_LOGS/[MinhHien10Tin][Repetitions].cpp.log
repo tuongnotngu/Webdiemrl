@@ -1,0 +1,35 @@
+﻿MinhHien10Tin‣repetitions: 3.20
+repetitions.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "repetitions.cpp" -pipe -O2 -s -static -lm -x c++ -o"repetitions.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom34987\
+Dịch thành công.
+
+MinhHien10Tin‣repetitions‣Test00: 0.00
+Thời gian ≈ 0.082759000 giây
+Kết quả KHÁC đáp án!
+MinhHien10Tin‣repetitions‣Test01: 0.80
+Thời gian ≈ 0.076769000 giây
+Kết quả khớp đáp án!
+MinhHien10Tin‣repetitions‣Test02: 0.80
+Thời gian ≈ 0.075905100 giây
+Kết quả khớp đáp án!
+MinhHien10Tin‣repetitions‣Test03: 0.00
+Thời gian ≈ 0.075343200 giây
+Kết quả KHÁC đáp án!
+MinhHien10Tin‣repetitions‣Test04: 0.00
+Chạy quá thời gian
+MinhHien10Tin‣repetitions‣Test05: 0.00
+Chạy quá thời gian
+MinhHien10Tin‣repetitions‣Test06: 0.00
+Chạy quá thời gian
+MinhHien10Tin‣repetitions‣Test07: 0.00
+Chạy quá thời gian
+MinhHien10Tin‣repetitions‣Test08: 0.00
+Chạy quá thời gian
+MinhHien10Tin‣repetitions‣Test09: 0.80
+Thời gian ≈ 0.072369700 giây
+Kết quả khớp đáp án!
+MinhHien10Tin‣repetitions‣Test10: 0.00
+Chạy quá thời gian
+MinhHien10Tin‣repetitions‣Test11: 0.80
+Thời gian ≈ 0.080232000 giây
+Kết quả khớp đáp án!

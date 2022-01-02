@@ -1,0 +1,35 @@
+﻿Phúc_10Tin‣ABCS: 10.00
+ABCS.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "ABCS.cpp" -pipe -O2 -s -static -lm -x c++ -o"ABCS.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom52975\
+Dịch thành công.
+
+Phúc_10Tin‣ABCS‣Test00: 1.00
+Thời gian ≈ 0.071997900 giây
+Kết quả khớp đáp án!
+Phúc_10Tin‣ABCS‣Test01: 1.00
+Thời gian ≈ 0.077072700 giây
+Kết quả khớp đáp án!
+Phúc_10Tin‣ABCS‣Test02: 1.00
+Thời gian ≈ 0.058893800 giây
+Kết quả khớp đáp án!
+Phúc_10Tin‣ABCS‣Test03: 1.00
+Thời gian ≈ 0.076627300 giây
+Kết quả khớp đáp án!
+Phúc_10Tin‣ABCS‣Test04: 1.00
+Thời gian ≈ 0.075206500 giây
+Kết quả khớp đáp án!
+Phúc_10Tin‣ABCS‣Test05: 1.00
+Thời gian ≈ 0.069485900 giây
+Kết quả khớp đáp án!
+Phúc_10Tin‣ABCS‣Test06: 1.00
+Thời gian ≈ 0.059478600 giây
+Kết quả khớp đáp án!
+Phúc_10Tin‣ABCS‣Test07: 1.00
+Thời gian ≈ 0.071438900 giây
+Kết quả khớp đáp án!
+Phúc_10Tin‣ABCS‣Test08: 1.00
+Thời gian ≈ 0.071946600 giây
+Kết quả khớp đáp án!
+Phúc_10Tin‣ABCS‣Test09: 1.00
+Thời gian ≈ 0.073736000 giây
+Kết quả khớp đáp án!

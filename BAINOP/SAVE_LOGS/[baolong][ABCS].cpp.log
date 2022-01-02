@@ -1,0 +1,39 @@
+﻿baolong‣ABCS: 0.00
+ABCS.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "ABCS.cpp" -pipe -O2 -s -static -lm -x c++ -o"ABCS.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom30130\
+ABCS.cpp: In function 'int check(int*)':
+ABCS.cpp:12:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Dịch thành công.
+
+baolong‣ABCS‣Test00: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom36291\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+baolong‣ABCS‣Test01: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom57919\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+baolong‣ABCS‣Test02: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom63824\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+baolong‣ABCS‣Test03: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom7849\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+baolong‣ABCS‣Test04: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom44805\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+baolong‣ABCS‣Test05: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom17299\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+baolong‣ABCS‣Test06: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom48100\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+baolong‣ABCS‣Test07: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom14903\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+baolong‣ABCS‣Test08: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom1051\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)
+baolong‣ABCS‣Test09: 0.00
+Chạy sinh lỗi
+Command: "C:\ProgramData\ThemisWorkSpace\ContestRoom54448\ABCS.exe" terminated with exit code: 3221225725 (Hexadecimal: C00000FD)

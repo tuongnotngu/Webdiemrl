@@ -1,0 +1,41 @@
+﻿anh thi‣repetitions: 0.80
+repetitions.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "repetitions.cpp" -pipe -O2 -s -static -lm -x c++ -o"repetitions.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom30538\
+Dịch thành công.
+
+anh thi‣repetitions‣Test00: 0.00
+Thời gian ≈ 0.079669100 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test01: 0.00
+Thời gian ≈ 0.074681400 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test02: 0.00
+Thời gian ≈ 0.062324800 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test03: 0.80
+Thời gian ≈ 0.073563500 giây
+Kết quả khớp đáp án!
+anh thi‣repetitions‣Test04: 0.00
+Thời gian ≈ 0.179885500 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test05: 0.00
+Thời gian ≈ 0.196895600 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test06: 0.00
+Thời gian ≈ 0.204477100 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test07: 0.00
+Thời gian ≈ 0.191883200 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test08: 0.00
+Thời gian ≈ 0.206546500 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test09: 0.00
+Thời gian ≈ 0.081795000 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test10: 0.00
+Thời gian ≈ 0.198394000 giây
+Kết quả KHÁC đáp án!
+anh thi‣repetitions‣Test11: 0.00
+Thời gian ≈ 0.078129200 giây
+Kết quả KHÁC đáp án!

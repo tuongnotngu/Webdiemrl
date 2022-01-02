@@ -1,0 +1,35 @@
+﻿ChanHung‣abcs: 10.00
+abcs.cpp
+"C:\Program Files (x86)\Themis\gcc\bin\g++.exe" -std=c++14 "abcs.cpp" -pipe -O2 -s -static -lm -x c++ -o"abcs.exe" -Wl,--stack,66060288|@WorkDir=C:\ProgramData\ThemisWorkSpace\WaitRoom55371\
+Dịch thành công.
+
+ChanHung‣abcs‣Test00: 1.00
+Thời gian ≈ 0.075654500 giây
+Kết quả khớp đáp án!
+ChanHung‣abcs‣Test01: 1.00
+Thời gian ≈ 0.067642300 giây
+Kết quả khớp đáp án!
+ChanHung‣abcs‣Test02: 1.00
+Thời gian ≈ 0.077398200 giây
+Kết quả khớp đáp án!
+ChanHung‣abcs‣Test03: 1.00
+Thời gian ≈ 0.070121500 giây
+Kết quả khớp đáp án!
+ChanHung‣abcs‣Test04: 1.00
+Thời gian ≈ 0.063232600 giây
+Kết quả khớp đáp án!
+ChanHung‣abcs‣Test05: 1.00
+Thời gian ≈ 0.073253900 giây
+Kết quả khớp đáp án!
+ChanHung‣abcs‣Test06: 1.00
+Thời gian ≈ 0.080082400 giây
+Kết quả khớp đáp án!
+ChanHung‣abcs‣Test07: 1.00
+Thời gian ≈ 0.075836200 giây
+Kết quả khớp đáp án!
+ChanHung‣abcs‣Test08: 1.00
+Thời gian ≈ 0.065591700 giây
+Kết quả khớp đáp án!
+ChanHung‣abcs‣Test09: 1.00
+Thời gian ≈ 0.073531400 giây
+Kết quả khớp đáp án!
