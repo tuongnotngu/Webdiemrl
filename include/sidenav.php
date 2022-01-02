@@ -94,15 +94,15 @@ $image = $data['image'];
           <div class="collapsible-header">
             <ul>
               <li>
-              <i class=" collapsible-header material-icons">task</i> <span style="margin-left:25px;">Bài tập</span>  <i class="material-icons right prefix" style="margin-right:0; margin-left:80px;">arrow_drop_down</i>
+              <i class=" collapsible-header material-icons">task</i> <span style="margin-left:25px;">Điểm</span>  <i class="material-icons right prefix" style="margin-right:0; margin-left:80px;">arrow_drop_down</i>
               </li>
             </ul>
           </div>
           <div class="collapsible-body">
             <ul>
               <li>
-              <li><a href="themdiemrl.php"><i class="material-icons">tasks</i>Thêm Bài Tập</a></li>
-              <li><a href="dsdiemrl.php"><i class="material-icons">tasks</i>Danh Sách Bài Tập</a></li>
+              <li><a href="themdiemrl.php"><i class="material-icons">tasks</i>Thên Điểm Rèn Luyện</a></li>
+              <li><a href="dsdiemrl.php"><i class="material-icons">tasks</i>Danh Sách Điểm Rèn Luyện</a></li>
               </li>
             </ul>
           </div>
