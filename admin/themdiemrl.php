@@ -1,24 +1,21 @@
 <?php
 require_once('../include/header.php');
 ?>
-
-
-
 <?php
-
+$hoten= $_SESSION['username'];
+?>
+<?php
     require_once('../include/dbcon.php');
-    
-
     if(isset($_POST['submit'])){
     $anhmc = $_FILES['filebt']['name'];
     $temp_file_name =  $_FILES['filebt']['tmp_name'];
-	//$id= $_POST['id'];
-	$hoten= $_POST['hoten'];
+	  //$id= $_POST['id'];
+    //$username=$_SESSION['username'];
     $malop = $_POST['malop'];
     $matc= $_POST['matc'];
-	$diem= $_POST['diem'];
-	$hocky= $_POST['hocky'];
-	$thanhtich= $_POST['thanhtich'];
+	  $diem= $_POST['diem'];
+	  $hocky= $_POST['hocky'];
+	  $thanhtich= $_POST['thanhtich'];
 	//Neu thu muc chua ton tai thi tao
 	if (!file_exists("../DIEMRL/$matc")) mkdir("../DIEMRL/$matc");
     move_uploaded_file($temp_file_name,"../DIEMRL/$matc/$anhmc");
@@ -71,14 +68,6 @@ require_once('../include/header.php');
               ?> </h5>
             </span>
               <form action="" method="POST" enctype="multipart/form-data">
-
-
-                        <div class="col l4">
-                            <div class="input-field">
-                                    <i class="material-icons prefix">person</i>
-                                <input type="text" name="hoten" id="hoten" required="required">
-                                <label for="hoten">Tên học sinh</label>
-                            </div>
 							<div class="input-field">
 								 
 									<i class="material-icons prefix">class</i>

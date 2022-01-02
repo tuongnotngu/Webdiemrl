@@ -6,7 +6,7 @@ require_once('include/login_header.php');
     require_once('include/dbcon.php');
 
     if(isset($_POST['login'])){
-
+    
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -20,6 +20,8 @@ require_once('include/login_header.php');
         $login_failed = $_SESSION['login_failed'];
     }
     else{
+        session_start();
+        $_SESSION['username']=$username;
         $data = mysqli_fetch_assoc($run);
         $name = $data['username'];
         $uid = $data['id'];
