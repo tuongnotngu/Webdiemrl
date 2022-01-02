@@ -67,8 +67,9 @@ require_once('../include/header.php');
                     <div class="row">
                       <div class="col l4 m12 s12 center">
                      <div class="input-field file-field">
-                     <input type="file" name="image" class="dropify" data-show-remove="false" data-default-file="../images/user.png" />
+                     <input type="file" name="image" class="dropify" data-show-remove="false" data-default-file="../images/img.jpg" />
                      </div>
+					 
                       </div>
                         <div class="col l4">
                             <div class="input-field">
@@ -140,7 +141,7 @@ require_once('../include/header.php');
                         </div>
                     </div>
                      
-                    <button type="submit" name="submit" style="width:100%" class="btn">Thêm User</button>
+                    <button type="submit" name="submit" style="width:100%" class="btn">Thêm học sinh</button>
                 </div>
               </form>
 

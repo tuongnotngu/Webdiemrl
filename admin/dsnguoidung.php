@@ -36,9 +36,7 @@ $run = mysqli_query($con,$query);
                         <table class="striped" id="myTable">
                             <tr class="cyan lighten-2 z-depth-1">
                                 <th>Sr. No</th>
-                                <th>Ảnh đại diện</th>
                                 <th>Họ và tên</th>
-                                <th>Username</th>
                                 <th>Password</th>
                                 <th>Ngày Sinh</th>
                                 <th>Mã lớp</th>

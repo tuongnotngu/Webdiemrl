@@ -10,7 +10,7 @@ require_once('../include/header.php');
 
 <?php
 
-$query = "select * from baitap";
+$query = "select * from diemrl";
 $run = mysqli_query($con,$query);
 
 ?>
@@ -35,39 +35,41 @@ $run = mysqli_query($con,$query);
                         <li class="collection-item">
                         <table class="striped" id="myTable">
                             <tr class="cyan lighten-2 z-depth-1">
-                                <th>Sr. No</th>
-                                <th>File bài tập</th>
-                                <th>Mã bài</th>
-                                <th>Tên bài</th>
-                                <th>Mã chủ đề</th>
-								<th>Action</th>
+                                <th>STT</th>
+                                <th>File ảnh minh chứng</th>
+                                <th>Mã tiêu chí</th>
+								<th>Thành tích</th>
+								<th>Học Kì</th>
+                                <th>Số điểm</th>
+								<th>Tùy chọn</th>
                             </tr>
                             
                                 <?php
                                 $count=0;
                                     while($data = mysqli_fetch_assoc($run)){
                                             $count++;
-                                            $tenfile = $data['tenfile'];
-                                            $mabt = $data['mabt'];
-                                            $macd = $data['macd'];
-                                            $tenbt = $data['tenbt'];
+                                            $anhmc = $data['anhmc'];
+                                            $matc = $data['matc'];
+                                            $thanhtich = $data['thanhtich'];
+                                            $hocky = $data['hocky'];
+											$diem = $data['diem'];
                                             
                                     
                                 ?><tr>
                                     <td> <?php echo $count; ?> </td>
-                                    <td> <a href="../BAITAP/<?php echo $macd; ?>/<?php
-                                    if (isset($tenfile) && !empty($tenfile)){
-                                     echo $tenfile;
+                                    <td> <a href="../DIEMRL/<?php echo $matc; ?>/<?php
+                                    if (isset($anhmc) && !empty($anhmc)){
+                                     echo $anhmc;
                                     }
                                     else
                                     {
                                       echo "user.png";
                                     }
-                                      ?>" > <?php  echo $tenfile; ?> </td>
-                                    <td><?php echo $mabt; ?></td>
-									<td><?php echo $tenbt; ?></td>
-                                    <td><?php echo $macd; ?></td>
-                                    
+                                      ?>" > <?php  echo $anhmc; ?> </td>
+                                    <td><?php echo $matc; ?></td>
+									<td><?php echo $thanhtich; ?></td>
+                                    <td><?php echo $hocky; ?></td>
+                                    <td><?php echo $diem; ?></td>
 									<td> 
 									  <a href="editbaitap.php?id=<?php echo $id; ?>" class=" green-text waves-light"> <i class="material-icons">mode_edit</i></a>  &nbsp;
 									  <a href="deletebaitap.php?id=<?php echo $id; ?>" class=" red-text waves-light"  > <i class="material-icons">delete</i></a> 
@@ -86,7 +88,7 @@ $run = mysqli_query($con,$query);
       <!-- The Navbar Menu Collection List -->
 <?php
 
-require_once('../include/sidenav.php');
+require_once('../include/usidenav.php');
 ?>
                    
 <?php

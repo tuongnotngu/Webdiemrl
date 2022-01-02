@@ -28,37 +28,23 @@ $run = mysqli_query($con,$query);
       <!-- The Dashboard Coding Started From Here -->
 
       <div class="row main">
-	 
+	  <?php  while($data = mysqli_fetch_assoc($run)){ ?>
 	  
         <div class="col m12 s12 l3">
           <div class="card">
             <div class="card-content blue lighten-3 white-text">
-              <h6> <b>NHẬP ĐIỂM RÈN LUYỆN</b> </h6>
+              <h6> <b><?php echo $data['tencd']; ?></b> </h6>
               
             </div>
             <div class=" center card-action blue lighten-2 white-text" >
 			
-           <a href="nhapdiemrl.php">More Information <i class="material-icons tiny" >open_in_new</i></a>
+           <a href="udsbaitap.php?id=<?php echo $data['macd']; ?>&user=<?php echo $_SESSION['username']; ?>&tencd=<?php echo $data['tencd']; ?>">More Information <i class="material-icons tiny" >open_in_new</i></a>
             </div>
           </div>
         </div>
      
-	 
-	 
-	   <div class="col m12 s12 l3">
-          <div class="card">
-            <div class="card-content blue lighten-3 white-text">
-              <h6> <b>XEM ĐIỂM RÈN LUYỆN</b> </h6>
-              
-            </div>
-            <div class=" center card-action blue lighten-2 white-text" >
-			
-           <a href="udsbaitap.php">More Information <i class="material-icons tiny" >open_in_new</i></a>
-            </div>
-          </div>
-        </div>
-     
-	
+	  <?php }?>
+	  
 	   </div>
 
       <!-- The Navbar Menu Collection List -->

@@ -10,7 +10,7 @@ require_once('../include/header.php');
     
 
     if(isset($_POST['submit'])){
-    $tenfile = $_FILES['filebt']['name'];
+    $anhmc = $_FILES['filebt']['name'];
     $temp_file_name =  $_FILES['filebt']['tmp_name'];
 	//$id= $_POST['id'];
 	$hoten= $_POST['hoten'];
@@ -18,10 +18,11 @@ require_once('../include/header.php');
     $matc= $_POST['matc'];
 	$diem= $_POST['diem'];
 	$hocky= $_POST['hocky'];
+	$thanhtich= $_POST['thanhtich'];
 	//Neu thu muc chua ton tai thi tao
-	if (!file_exists("../BAITAP/$macd")) mkdir("../BAITAP/$macd");
-    move_uploaded_file($temp_file_name,"../BAITAP/$macd/$tenfile");
-    $query = "INSERT INTO `diemrl`(`id`,`hoten`, `malop`, `matc`,`diem`,`hocky`, `tenfile`) VALUES ('$id','$hoten','$malop','$matc','$diem','$hocky','$tenfile')";
+	if (!file_exists("../DIEMRL/$matc")) mkdir("../DIEMRL/$matc");
+    move_uploaded_file($temp_file_name,"../DIEMRL/$matc/$anhmc");
+    $query = "INSERT INTO `diemrl`(`hoten`, `malop`, `matc`,`thanhtich`,`diem`,`hocky`, `anhmc`) VALUES ('$hoten','$malop','$matc','$thanhtich','$diem','$hocky','$anhmc')";
     $run = mysqli_query($con,$query);
     
    
@@ -111,7 +112,7 @@ require_once('../include/header.php');
 								<div class="input-field">
 								 
 									<i class="material-icons prefix">edit</i>
-									<select name="malop" required="required">
+									<select name="matc" required="required">
 									<option value="">Chọn mã tiêu chí</option>
 									<?php
 										$query = "SELECT * FROM `tieuchi`" ;
@@ -132,13 +133,13 @@ require_once('../include/header.php');
 								</div>
 								<div class="input-field">
                                         <i class="material-icons prefix">school</i>
-                                         <select name="hocky" required="required">
-                                            <option value="1">Giải nhất</option>
-                                            <option value="2">Giải nhì</option>
-											<option value="3">Giải ba</option>
-											<option value="4">Giải khuyến khích</option>
-											<option value="5">Công nhận</option>
-											<option value="6">Có tham gia</option>
+                                         <select name="thanhtich" required="required">
+                                            <option value="giải nhất">Giải nhất</option>
+                                            <option value="giải nhì">Giải nhì</option>
+											<option value="giải ba">Giải ba</option>
+											<option value="giải khuyến khích">Giải khuyến khích</option>
+											<option value="công nhận">Công nhận</option>
+											<option value="có tham gia">Có tham gia</option>
 										</select>
                                         <label for="city">Thành tích</label>
                                  </div>
@@ -161,7 +162,7 @@ require_once('../include/header.php');
 
                     </div>
                      
-                    <button type="submit" name="submit" style="width:90%" class="btn">Nhập vào</button>
+                    <button type="submit" name="submit" style="width:100%" class="btn">NHẬP ĐIỂM RÈN LUYỆN</button>
                 </div>
               </form>
 
@@ -171,7 +172,7 @@ require_once('../include/header.php');
       <!-- The Navbar Menu Collection List -->
 
       <?php
-require_once('../include/sidenav.php');
+require_once('../include/usidenav.php');
 ?>
 
 

@@ -62,13 +62,13 @@ else{
 
 ?>
 
-  <body style="background-image:url(images/sms_bg.jpg); background-size: cover;">
+  <body style="background-image:url(images/quochoc4.jpg); background-size: cover;">
     <div class="row"style="margin-top:10%; opacity: 0.8;">
         <div class="col l4 offset-l4 m6 offset-m3 s12">
             <form action="" method="POST">
                     <div class="card-panel" style="border-radius: 15px;">
-                            <div class="card-content">
-                                <h5 class="<?php if(isset($login_failed)) { echo "hide";} ?>" >TỰ HỌC LẬP TRÌNH</h5>
+                            <div class="center card-content">
+                                <h5 class="<?php if(isset($login_failed)) { echo "hide";} ?>" >ĐĂNG NHẬP</h5>
                             </div>
                                                             <span class="card-title container">
               <h5 class="center red-text"><?php 
@@ -85,22 +85,18 @@ else{
                                     person
                                 </i>
                                 <input type="text" name="username" value="admin" id="username" required="required">
-                                <label for="username">Enter Your Username</label>
+                                <label for="username">Tên đăng nhập</label>
                             </div>
                             <div class="input-field">
                                 <i class="material-icons prefix">
                                     lock
                                 </i>                    
                                 <input type="password" name="password" value="farooqui" id="password" required="required">
-                                <label for="password">Enter Your Password</label>
+                                <label for="password">Mật khẩu</label>
                             </div>
-                            <div class="">
-                            <input type="checkbox" name="checkbox" id="checkbox">
-                            <label for="checkbox">Remember Me!</label>
-                        </div>
                         <br>
                             <div>
-                            <button type="submit" name="login" class="btn" style="width: 100%; border-radius: 15px;">Login</button>
+                            <button type="submit" name="login" class="btn" style="width: 100%; border-radius: 15px;">Đăng nhập</button>
                         </div>
                         </div>
             </form>

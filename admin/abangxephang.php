@@ -90,8 +90,6 @@ $count = 0;
               <thead>
                 <tr>
               <th>Vị thứ</th>
-              <th>UserName</th>
-              <th>Họ và Tên</th>
 			  <th>Lớp</th>
 			  <th>Tổng điểm</th>
             </tr>
@@ -101,8 +99,8 @@ $count = 0;
               
                 <?php while($data= mysqli_fetch_assoc($run)){
                     $count++;
-                    $username = $data['username'];
-                    $hoten = $data['hoten'];
+                    //$username = $data['username'];
+                    //$hoten = $data['hoten'];
 					$lop = $data['lop'];
 					$tongdiem = $data['tongdiem'];
                 ?>
