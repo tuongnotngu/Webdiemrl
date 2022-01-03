@@ -11,6 +11,12 @@ $username= $_SESSION['username'];
     $temp_file_name =  $_FILES['filebt']['tmp_name'];
 	  //$id= $_POST['id'];
     //$username=$_SESSION['username'];
+    $sql = "SELECT * FROM users WHERE username='tuong'";
+    $hoten=mysqli_query($con,$sql);
+    if (mysqli_num_rows($hoten) > 0) {
+	  if($rowData = mysqli_fetch_array($hoten))
+    $hoten=$rowData["hoten"];
+}
     $malop = $_POST['malop'];
     $matc= $_POST['matc'];
 	  $diem= $_POST['diem'];
@@ -19,7 +25,7 @@ $username= $_SESSION['username'];
 	//Neu thu muc chua ton tai thi tao
 	if (!file_exists("../DIEMRL/$matc")) mkdir("../DIEMRL/$matc");
     move_uploaded_file($temp_file_name,"../DIEMRL/$matc/$anhmc");
-    $query = "INSERT INTO `diemrl`(`username`, `malop`, `matc`,`thanhtich`,`diem`,`hocki`, `anhmc`) VALUES ('$username','$malop','$matc','$thanhtich','$diem','$hocki','$anhmc')";
+    $query = "INSERT INTO `diemrl`(`username`,`hoten`, `malop`, `matc`,`thanhtich`,`diem`,`hocki`, `anhmc`) VALUES ('$username','$hoten','$malop','$matc','$thanhtich','$diem','$hocki','$anhmc')";
     $run = mysqli_query($con,$query);
     
    

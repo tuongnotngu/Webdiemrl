@@ -16,11 +16,17 @@ require_once('../include/header.php');
     $matcvp= $_POST['matcvp'];
 	  $diem= $_POST['diem'];
 	  $hocki= $_POST['hocki'];
+    $sql = "SELECT * FROM users WHERE username='tuong'";
+    $hoten=mysqli_query($con,$sql);
+    if (mysqli_num_rows($hoten) > 0) {
+	  if($rowData = mysqli_fetch_array($hoten))
+    $hoten=$rowData["hoten"];
+}
 	  //$thanhtich= $_POST['thanhtich'];
 	//Neu thu muc chua ton tai thi tao
 	  if (!file_exists("../DIEMVP/$matcvp")) mkdir("../DIEMVP/$matcvp");
     move_uploaded_file($temp_file_name,"../DIEMVP/$matcvp/$anhmc");
-    $query = "INSERT INTO `diemvp`(`username`, `malop`, `matcvp`,`hocki`,`diem`, `anhmc`) VALUES ('$username','$malop','$matcvp','$hocki','$diem','$anhmc')";
+    $query = "INSERT INTO `diemvp`(`username`,`hoten`, `malop`, `matcvp`,`hocki`,`diem`, `anhmc`) VALUES ('$username','$hoten','$malop','$matcvp','$hocki','$diem','$anhmc')";
     if(mysqli_query($con,$query))
     {
       echo "Thêm Điểm Thành Công";
