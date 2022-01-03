@@ -2,7 +2,7 @@
 require_once('../include/header.php');
 ?>
 <?php
-$username= $_SESSION['username'];
+
 ?>
 <?php
     require_once('../include/dbcon.php');
@@ -11,28 +11,25 @@ $username= $_SESSION['username'];
     $temp_file_name =  $_FILES['filebt']['tmp_name'];
 	  //$id= $_POST['id'];
     //$username=$_SESSION['username'];
+    $username= $_POST['username'];
     $malop = $_POST['malop'];
-    $matc= $_POST['matc'];
+    $matcvp= $_POST['matcvp'];
 	  $diem= $_POST['diem'];
 	  $hocki= $_POST['hocki'];
-	  $thanhtich= $_POST['thanhtich'];
+	  //$thanhtich= $_POST['thanhtich'];
 	//Neu thu muc chua ton tai thi tao
-	if (!file_exists("../DIEMRL/$matc")) mkdir("../DIEMRL/$matc");
-    move_uploaded_file($temp_file_name,"../DIEMRL/$matc/$anhmc");
-    $query = "INSERT INTO `diemrl`(`username`, `malop`, `matc`,`thanhtich`,`diem`,`hocki`, `anhmc`) VALUES ('$username','$malop','$matc','$thanhtich','$diem','$hocki','$anhmc')";
-    $run = mysqli_query($con,$query);
-    
-   
-    if($run)
+	  if (!file_exists("../DIEMVP/$matcvp")) mkdir("../DIEMVP/$matcvp");
+    move_uploaded_file($temp_file_name,"../DIEMVP/$matcvp/$anhmc");
+    $query = "INSERT INTO `diemvp`(`username`, `malop`, `matcvp`,`hocki`,`diem`, `anhmc`) VALUES ('$username','$malop','$matcvp','$hocki','$diem','$anhmc')";
+    mysqli_query($con,$query);
+    if(mysqli_query($con,$query))
     {
-        $_SESSION['diemrl_added'] = "Thêm điểm thành công";
-        $diemrl_added =  $_SESSION['diemrl_added'];
+      echo "Thêm Điểm Thành Công";
     }
-    else {
-
-      $_SESSION['diemrl_added_failed'] = "Thêm điểm thất bại";
-      $diemrl_added_failed =  $_SESSION['diemrl_added_failed'];
-     }
+    else
+    {
+      echo "Thêm Điểm Thất Bại";
+    }
 }
 ?>
 
@@ -49,16 +46,10 @@ $username= $_SESSION['username'];
 
 
       <!-- The Dashboard Coding Started From Here -->
-	  
-	  
-	
-
-	  
-	  
-
+	  	                      
             <div class="card-panel main">
             <span class="card-title container center">
-              <h5>Thêm điểm rèn luyện</h5>
+              <h5>Thêm điểm vi phạm</h5>
               <h5 class="center red-text"><?php 
               
                 if(isset($diemrl_added)){
@@ -68,6 +59,11 @@ $username= $_SESSION['username'];
               ?> </h5>
             </span>
               <form action="" method="POST" enctype="multipart/form-data">
+              <div class="input-field">
+                                    <i class="material-icons prefix">person</i>
+                                <input type="text" name="username" id="username" required="required">
+                                <label for="username">Tài Khoản Của Học Sinh</label>
+                            </div>
 							<div class="input-field">
 								 
 									<i class="material-icons prefix">class</i>
@@ -101,41 +97,30 @@ $username= $_SESSION['username'];
 								<div class="input-field">
 								 
 									<i class="material-icons prefix">edit</i>
-									<select name="matc" required="required">
-									<option value="">Chọn mã tiêu chí</option>
+									<select name="matcvp" required="required">
+									<option value="">Chọn mã tiêu chí vi phạm</option>
 									<?php
-										$query = "SELECT * FROM `tieuchi`" ;
+										$query = "SELECT * FROM `tieuchivp`" ;
 										$urun = mysqli_query($con,$query);											
 									
 										while($data= mysqli_fetch_assoc($urun)){
 										
 										//$malop = $data['malop'];
-										$matc = $data['matc'];
-										$tentc = $data['tentc'];
+										$matcvp = $data['matcvp'];
+										$tentcvp = $data['tentcvp'];
 
 									?>
 									
-									<option value="<?php echo $tentc; ?>"><?php echo $tentc  ?></option>
+									<option value="<?php echo $tentcvp; ?>"><?php echo $tentcvp  ?></option>
 									 <?php } ?>
-									<label for="matc">Tiêu chí</label>
+									<label for="matcvp">Tiêu chí vi phạm</label>
 									</select>
 								</div>
-								<div class="input-field">
-                                        <i class="material-icons prefix">school</i>
-                                         <select name="thanhtich" required="required">
-                                            <option value="giải nhất">Giải nhất</option>
-                                            <option value="giải nhì">Giải nhì</option>
-											<option value="giải ba">Giải ba</option>
-											<option value="giải khuyến khích">Giải khuyến khích</option>
-											<option value="công nhận">Công nhận</option>
-											<option value="có tham gia">Có tham gia</option>
-										</select>
-                                        <label for="thanhtich">Thành tích</label>
-                                 </div>
+								
 								<div class="input-field">
                                     <i class="material-icons prefix">edit</i>
                                 <input type="text" name="diem" id="diem" required="required">
-                                <label for="diem">Số điểm cộng</label>
+                                <label for="diem">Số điểm trừ</label>
                             </div>
                                 <div class="input-field">
                                         <i class="material-icons prefix">image</i>
@@ -151,7 +136,7 @@ $username= $_SESSION['username'];
 
                     </div>
                      
-                    <button type="submit" name="submit" style="width:100%" class="btn">NHẬP ĐIỂM RÈN LUYỆN</button>
+                    <button type="submit" name="submit" style="width:100%" class="btn">NHẬP ĐIỂM VI PHẠM</button>
                 </div>
               </form>
 
@@ -161,7 +146,7 @@ $username= $_SESSION['username'];
       <!-- The Navbar Menu Collection List -->
 
       <?php
-require_once('../include/usidenav.php');
+require_once('../include/sidenav.php');
 ?>
 
 

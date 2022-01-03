@@ -7,22 +7,22 @@ require_once('../include/dbcon.php');
 <?php
 
 
-    if(isset($_POST['add_tieuchi'])){
+    if(isset($_POST['add_tieuchivp'])){
 
-    $matc = $_POST['matc'];
-    $tentc= $_POST['tentc'];
+    $matcvp = $_POST['matcvp'];
+    $tentcvp= $_POST['tentcvp'];
 
-   $query = "INSERT INTO `tieuchi`(`matc`, `tentc`) VALUES ('$matc','$tentc')";
+    $query = "INSERT INTO `tieuchivp`(`matcvp`, `tentcvp`) VALUES ('$matcvp','$tentcvp')";
     $run = mysqli_query($con,$query);
     
     if($run)
     {
-        $_SESSION['tieuchi_added_successfully'] = "Thêm tiêu chí thành công";
-        $tieuchi_added_successfully = $_SESSION['tieuchi_added_successfully'];
+        $_SESSION['tieuchivp_added_successfully'] = "Thêm tiêu chí vi phạm thành công";
+        $tieuchivp_added_successfully = $_SESSION['tieuchivp_added_successfully'];
     }
     else{
 
-     echo "Thêm tiêu chí thất bại ".mysqli_error($con);
+     echo "Thêm tiêu chí vi phạm thất bại ".mysqli_error($con);
     }
 }
 ?>
@@ -43,11 +43,11 @@ require_once('../include/dbcon.php');
 
         <div class="card-panel main">
             <span class="card-title container center">
-              <h5>Thêm Tiêu chí rèn luyện</h5>
+              <h5>Thêm Tiêu chí vi phạm</h5>
               <h5 class="center red-text"><?php 
               
-                if(isset($tieuchi_added_successfully)){
-                  echo $tieuchi_added_successfully; 
+                if(isset($tieuchivp_added_successfully)){
+                  echo $tieuchivp_added_successfully; 
                 }
                 
 
@@ -57,15 +57,15 @@ require_once('../include/dbcon.php');
             <div class="card-content container">
               <div class="input-field">
                 <i class="material-icons prefix">topic</i>
-                <input type="text" name="matc" id="matc" required="required">
-                <label for="macd" class="">Nhập mã tiêu chí rèn luyện</label>
+                <input type="text" name="matcvp" id="matcvp" required="required">
+                <label for="matcvp" class="">Nhập mã tiêu chí vi phạm</label>
               </div>
               <div class="input-field">
                 <i class="material-icons prefix">topic</i>
-                <input type="text" name="tentc" id="tentc" required="required">
-                <label for="tentc" class="">Nhập tiêu chí rèn luyện</label>
+                <input type="text" name="tentcvp" id="tentcvp" required="required">
+                <label for="tentcvp" class="">Nhập tiêu chí vi phạm</label>
               </div>
-              <button type="submit" name="add_tieuchi" class="btn" style="width:100%;">Thêm tiêu chí rèn luyện</button>
+              <button type="submit" name="add_tieuchivp" class="btn" style="width:100%;">Thêm tiêu chí vi phạm</button>
             </div>
            </form>
         </div>

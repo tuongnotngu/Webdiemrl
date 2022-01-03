@@ -36,7 +36,26 @@ $image = $data['image'];
             </ul>
           </div>
         </li>
-		
+
+        <li>
+          <div class="collapsible-header">
+            <ul>
+              <li>
+              <i class=" collapsible-header material-icons">task</i> <span style="margin-left:25px;">Tiêu chí</span>  <i class="material-icons right prefix" style="margin-right:0; margin-left:80px;">arrow_drop_down</i>
+              </li>
+            </ul>
+          </div>
+          <div class="collapsible-body">
+            <ul>
+              <li>
+              <li><a href="themtieuchi.php"><i class="material-icons">edit</i>Thêm tiêu chí rèn luyện</a></li>
+              <li><a href="themtieuchivp.php"><i class="material-icons">edit</i>Thêm tiêu chí vi phạm</a></li>
+              <li><a href="dstieuchi.php"><i class="material-icons">list</i>Danh sách tiêu chí</a></li>
+              </li>
+            </ul>
+          </div>
+        </li>
+
 		<li>
           <div class="collapsible-header">
             <ul>
@@ -59,33 +78,17 @@ $image = $data['image'];
           <div class="collapsible-header">
             <ul>
               <li>
-              <i class=" collapsible-header material-icons">task</i> <span style="margin-left:25px;">Tiêu chí</span>  <i class="material-icons right prefix" style="margin-right:0; margin-left:80px;">arrow_drop_down</i>
+              <i class=" collapsible-header material-icons">topic</i> <span style="margin-left:25px;">Điểm</span>  <i class="material-icons right prefix" style="margin-right:0; margin-left:80px;">arrow_drop_down</i>
               </li>
             </ul>
           </div>
           <div class="collapsible-body">
             <ul>
               <li>
-              <li><a href="themtieuchi.php"><i class="material-icons">edit</i>Thêm tiêu chí</a></li>
-              <li><a href="dstieuchi.php"><i class="material-icons">list</i>Danh sách tiêu chí</a></li>
-              </li>
-            </ul>
-          </div>
-        </li>
-		
-		<li>
-          <div class="collapsible-header">
-            <ul>
-              <li>
-              <i class=" collapsible-header material-icons">topic</i> <span style="margin-left:25px;">Vi phạm</span>  <i class="material-icons right prefix" style="margin-right:0; margin-left:80px;">arrow_drop_down</i>
-              </li>
-            </ul>
-          </div>
-          <div class="collapsible-body">
-            <ul>
-              <li>
-              <li><a href="themvp.php"><i class="material-icons">edit</i>Thêm vi phạm</a></li>
-              <li><a href="dsvp.php"><i class="material-icons">list</i>Danh sách vi phạm</a></li>
+              <li><a href="themdiemvp.php"><i class="material-icons">edit</i>Thêm Điểm Vi Phạm</a></li>
+              <li><a href="tongdiemvp.php"><i class="material-icons">list</i>Tổng Điểm Vi Phạm</a></li>
+              <li><a href="tongdiemrl.php"><i class="material-icons">list</i>Tổng Điểm Rèn Luyện</a></li>
+              <li><a href="tongdiem.php"><i class="material-icons">list</i>Tổng Điểm Hạnh Kiểm</a></li>
               </li>
             </ul>
           </div>

@@ -36,12 +36,14 @@ $run = mysqli_query($con,$query);
                         <table class="striped" id="myTable">
                             <tr class="cyan lighten-2 z-depth-1">
                                 <th>STT</th>
-                                <th>File ảnh minh chứng</th>
+                                
                                 <th>Mã tiêu chí</th>
-								<th>Thành tích</th>
-								<th>Học Kì</th>
+								                <th>Thành tích</th>
+							                 	<th>Học Kì</th>
                                 <th>Số điểm</th>
-								<th>Tùy chọn</th>
+                                <th>File ảnh minh chứng</th>
+								                <th>Tùy chọn</th>
+
                             </tr>
                             
                                 <?php
@@ -51,12 +53,19 @@ $run = mysqli_query($con,$query);
                                             $anhmc = $data['anhmc'];
                                             $matc = $data['matc'];
                                             $thanhtich = $data['thanhtich'];
-                                            $hocky = $data['hocky'];
-											$diem = $data['diem'];
+                                            $hocki = $data['hocki'];
+											                      $diem = $data['diem'];
                                             
                                     
-                                ?><tr>
+                                ?>
+
+                                <tr>
                                     <td> <?php echo $count; ?> </td>
+                                    
+                                    <td><?php echo $matc; ?></td>
+									<td><?php echo $thanhtich; ?></td>
+                                    <td><?php echo $hocki; ?></td>
+                                    <td><?php echo $diem; ?></td>
                                     <td> <a href="../DIEMRL/<?php echo $matc; ?>/<?php
                                     if (isset($anhmc) && !empty($anhmc)){
                                      echo $anhmc;
@@ -66,10 +75,6 @@ $run = mysqli_query($con,$query);
                                       echo "user.png";
                                     }
                                       ?>" > <?php  echo $anhmc; ?> </td>
-                                    <td><?php echo $matc; ?></td>
-									<td><?php echo $thanhtich; ?></td>
-                                    <td><?php echo $hocky; ?></td>
-                                    <td><?php echo $diem; ?></td>
 									<td> 
 									  <a href="editbaitap.php?id=<?php echo $id; ?>" class=" green-text waves-light"> <i class="material-icons">mode_edit</i></a>  &nbsp;
 									  <a href="deletebaitap.php?id=<?php echo $id; ?>" class=" red-text waves-light"  > <i class="material-icons">delete</i></a> 
