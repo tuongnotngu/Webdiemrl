@@ -21,7 +21,6 @@ require_once('../include/header.php');
 	  if (!file_exists("../DIEMVP/$matcvp")) mkdir("../DIEMVP/$matcvp");
     move_uploaded_file($temp_file_name,"../DIEMVP/$matcvp/$anhmc");
     $query = "INSERT INTO `diemvp`(`username`, `malop`, `matcvp`,`hocki`,`diem`, `anhmc`) VALUES ('$username','$malop','$matcvp','$hocki','$diem','$anhmc')";
-    mysqli_query($con,$query);
     if(mysqli_query($con,$query))
     {
       echo "Thêm Điểm Thành Công";
