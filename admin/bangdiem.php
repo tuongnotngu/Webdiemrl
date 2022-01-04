@@ -41,8 +41,9 @@ foreach (glob("../BAINOP/Logs/*.log") as $filename) {
 	$query = "SELECT * FROM `ketqua` WHERE `username` = '$f_user' and mabt='$f_mabai'";
 	$run = mysqli_query($con,$query);
 	$row = mysqli_num_rows($run);
-		
-	if($row < 1){
+	
+
+	if($row<1){
 		//Luu du lieu da lay tu file log vao database
 		$query = "INSERT INTO `ketqua`(`username`, `mabt`, `diem`, `filekq`,`logfile`,`ngaygionop`) VALUES ('$f_user','$f_mabai','$diem','$tenfilecode','$f_fullname','$f_cdate')";
 

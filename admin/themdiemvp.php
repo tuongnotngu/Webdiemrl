@@ -16,7 +16,7 @@ require_once('../include/header.php');
     $matcvp= $_POST['matcvp'];
 	  $diem= $_POST['diem'];
 	  $hocki= $_POST['hocki'];
-    $sql = "SELECT * FROM users WHERE username='tuong'";
+    $sql = "SELECT * FROM users WHERE username='$username'";
     $hoten=mysqli_query($con,$sql);
     if (mysqli_num_rows($hoten) > 0) {
 	  if($rowData = mysqli_fetch_array($hoten))
