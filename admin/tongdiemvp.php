@@ -45,8 +45,9 @@ if (mysqli_num_rows($result) > 0)
     $sql = " SELECT * FROM tongdiemvp WHERE 1";
     $result3 = mysqli_query($conn, $sql);
     $row3 = mysqli_fetch_assoc($result3);
-    $row=$row+$row;
-    if($row > $row3)
+
+    //$row=$row+$row;
+    if(2*mysqli_num_rows($result) > mysqli_num_rows($result3))
     {
       $sql="INSERT INTO `tongdiemvp` (`id`, `username`, `hoten`, `malop`, `hocki`) VALUES ('$count','$username','$hoten','$malop',1)";
       mysqli_query($conn, $sql);

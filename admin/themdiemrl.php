@@ -11,7 +11,7 @@ $username= $_SESSION['username'];
     $temp_file_name =  $_FILES['filebt']['tmp_name'];
 	  //$id= $_POST['id'];
     //$username=$_SESSION['username'];
-    $sql = "SELECT * FROM users WHERE username='tuong'";
+    $sql = "SELECT * FROM users WHERE username='$username'";
     $hoten=mysqli_query($con,$sql);
     if (mysqli_num_rows($hoten) > 0) {
 	  if($rowData = mysqli_fetch_array($hoten))
