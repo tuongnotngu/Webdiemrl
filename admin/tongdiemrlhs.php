@@ -12,13 +12,6 @@ if (!$conn) {
 }
 $diemhk1=0;
 $diemhk2=0;
-
-$diemrlhk1=0;
-$diemrlhk2=0;
-
-$diemvphk1=0;
-$diemvphk2=0;
-
 $sql = "SELECT username, hoten ,malop FROM users where quyen=1";
 $result = mysqli_query($conn, $sql);
 $count=0;
@@ -29,12 +22,6 @@ if (mysqli_num_rows($result) > 0)
   {
     $diemhk1=0;
     $diemhk2=0;
-
-    $diemrlhk1=0;
-    $diemrlhk2=0;
-
-    $diemvphk1=0;
-    $diemvphk2=0;
     $count++;
     $id=$count;
     $username= $row["username"];
@@ -45,54 +32,37 @@ if (mysqli_num_rows($result) > 0)
     $result1 = mysqli_query($conn, $sql);
     while($row1 = mysqli_fetch_assoc($result1)) 
       {
-        $diemrlhk1=$diemrlhk1+$row1['diem'];
+        $diemhk1=$diemhk1+$row1['diem'];
       }
 
     $sql = "SELECT diem from diemrl where username= '$username' and hocki=2 ";
     $result2 = mysqli_query($conn, $sql);
     while($row2 = mysqli_fetch_assoc($result2)) 
       {
-        $diemrlhk2=$diemrlhk2+$row2['diem'];
+        $diemhk2=$diemhk2+$row2['diem'];
       }
-    $sql = "SELECT diem from diemvp where username= '$username' and hocki=1 ";
+    //"INSERT INTO `tongdiemvp` (`id`, `username`, `hoten`, `malop`,) VALUES ('$id','$username','$hoten','$malop')";
+    $sql = " SELECT * FROM tongdiemrl WHERE 1";
     $result3 = mysqli_query($conn, $sql);
-    while($row3 = mysqli_fetch_assoc($result3)) 
-      {
-          $diemvphk1=$diemvphk1+$row3['diem'];
-      }
-  
-    $sql = "SELECT diem from diemvp where username= '$username' and hocki=2 ";
-    $result4 = mysqli_query($conn, $sql);
-    while($row4 = mysqli_fetch_assoc($result4)) 
-      {
-          $diemvphk2=$diemvphk2+$row4['diem'];
-      }
+    $row3 = mysqli_fetch_assoc($result3);
 
-    $sql = " SELECT * FROM tongdiem WHERE 1";
-    $result5 = mysqli_query($conn, $sql);
-    $row5 = mysqli_fetch_assoc($result5);
-
-    $diemhk1=100+$diemrlhk1-$diemvphk1;
-    $diemhk2=100+$diemrlhk2-$diemvphk2;
     //$row=$row+$row;
-    //2*mysqli_num_rows($result) > mysqli_num_rows($result5)
-    //$dong=0;
-    if(mysqli_num_rows($result5)<2*mysqli_num_rows($result))
+    if(2*mysqli_num_rows($result) > mysqli_num_rows($result3))
     {
-      $sql="INSERT INTO `tongdiem` (`id`, `username`, `hoten`, `malop`, `hocki`) VALUES ('$count','$username','$hoten','$malop',1)";
+      $sql="INSERT INTO `tongdiemrl` (`id`, `username`, `hoten`, `malop`, `hocki`) VALUES ('$count','$username','$hoten','$malop',1)";
       mysqli_query($conn, $sql);
-      $sql="INSERT INTO `tongdiem`(`id`, `username`, `hoten`, `malop`, `hocki`) VALUES ('$count','$username','$hoten','$malop',2)";
+      $sql="INSERT INTO `tongdiemrl`(`id`, `username`, `hoten`, `malop`, `hocki`) VALUES ('$count','$username','$hoten','$malop',2)";
       mysqli_query($conn, $sql);
-      $sql="UPDATE `tongdiem` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
+      $sql="UPDATE `tongdiemrl` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
       mysqli_query($conn, $sql);
-      $sql="UPDATE `tongdiem` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
+      $sql="UPDATE `tongdiemrl` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
       mysqli_query($conn, $sql);
     }
-    if(mysqli_num_rows($result5)==2*mysqli_num_rows($result))
+    else
     {
-    $sql="UPDATE `tongdiem` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
+    $sql="UPDATE `tongdiemrl` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
     mysqli_query($conn, $sql);
-    $sql="UPDATE `tongdiem` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
+    $sql="UPDATE `tongdiemrl` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
     mysqli_query($conn, $sql);
     }
     
@@ -132,7 +102,7 @@ if(isset($_GET['editlopid']))
 <?php
 // Coding To Fetch All lop Details
 
-$query = "SELECT * FROM `tongdiem`";
+$query = "SELECT * FROM `tongdiemrl`";
 $run = mysqli_query($con,$query);
 $count = 0;
 
@@ -154,7 +124,7 @@ $count = 0;
 
       <div class="main">
 	  
-              <div class="card-panel center"><h5>Danh sách tổng điểm </h5>
+              <div class="card-panel center"><h5>Danh sách tổng điểm rèn luyện</h5>
           <card-title>
           </card-title>
           <div class="card-content">
@@ -167,7 +137,7 @@ $count = 0;
 			  <th>Mã lớp</th>
 			  <th>Học kì</th>
 			  <th>Điểm</th>
-			 
+			  <th>Tùy chọn</th>
             </tr>
             
             </thead>
@@ -190,7 +160,12 @@ $count = 0;
 				<td> <?php echo $malop; ?> </td>
 				<td> <?php echo $hocki; ?> </td>
 				<td> <?php echo $diem; ?> </td>
-               
+                
+                <td> 
+                  <a href="edittieuchi.php?id=<?php echo $matc; ?>" class=" green-text waves-light"> <i class="material-icons">mode_edit</i></a>  &nbsp;
+                  <a href="deletetieuchi.php?id=<?php echo $matc; ?>" class=" red-text waves-light"  > <i class="material-icons">delete</i></a> 
+                  <!--**********************New Testing Coding Started*****************************-->
+                </td>
                 </tr>
                   <?php } ?>
             </tbody>
@@ -206,7 +181,7 @@ $count = 0;
       
       <!-- The Navbar Menu Collection List -->
       <?php
-require_once('../include/sidenav.php');
+require_once('../include/usidenav.php');
 ?>
 
       <?php

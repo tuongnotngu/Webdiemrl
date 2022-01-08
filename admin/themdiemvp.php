@@ -12,15 +12,16 @@ require_once('../include/header.php');
 	  //$id= $_POST['id'];
     //$username=$_SESSION['username'];
     $username= $_POST['username'];
-    $malop = $_POST['malop'];
+    
     $matcvp= $_POST['matcvp'];
 	  $diem= $_POST['diem'];
 	  $hocki= $_POST['hocki'];
-    $sql = "SELECT * FROM users WHERE username='$username'";
+    $sql = "SELECT * FROM users WHERE username='$username' ";
     $hoten=mysqli_query($con,$sql);
     if (mysqli_num_rows($hoten) > 0) {
 	  if($rowData = mysqli_fetch_array($hoten))
     $hoten=$rowData["hoten"];
+    $malop =$rowData['malop'];
 }
 	  //$thanhtich= $_POST['thanhtich'];
 	//Neu thu muc chua ton tai thi tao
@@ -69,28 +70,7 @@ require_once('../include/header.php');
                                 <input type="text" name="username" id="username" required="required">
                                 <label for="username">Tài Khoản Của Học Sinh</label>
                             </div>
-							<div class="input-field">
-								 
-									<i class="material-icons prefix">class</i>
-									<select name="malop" required="required">
-									<option value="">Chọn lớp</option>
-									<?php
-										$query = "SELECT * FROM `lop`" ;
-										$urun = mysqli_query($con,$query);											
-									
-										while($data= mysqli_fetch_assoc($urun)){
-										
-										$malop = $data['malop'];
-										$tenlop = $data['tenlop'];
-										$namhoc = $data['namhoc'];
-
-									?>
-									
-									<option value="<?php echo $malop; ?>"><?php echo $malop  ?></option>
-									 <?php } ?>
-									<label for="malop">Lớp</label>
-									</select>
-								</div>
+					
 								<div class="input-field">
                                         <i class="material-icons prefix">school</i>
                                          <select name="hocki" required="required">

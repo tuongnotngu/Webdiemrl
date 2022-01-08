@@ -16,16 +16,18 @@ $username= $_SESSION['username'];
     if (mysqli_num_rows($hoten) > 0) {
 	  if($rowData = mysqli_fetch_array($hoten))
     $hoten=$rowData["hoten"];
+    $malop = $rowData['malop'];
 }
-    $malop = $_POST['malop'];
+    
     $matc= $_POST['matc'];
 	  $diem= $_POST['diem'];
 	  $hocki= $_POST['hocki'];
 	  $thanhtich= $_POST['thanhtich'];
+	  //$trangthai= $_POST['trangthai'];
 	//Neu thu muc chua ton tai thi tao
 	if (!file_exists("../DIEMRL/$matc")) mkdir("../DIEMRL/$matc");
     move_uploaded_file($temp_file_name,"../DIEMRL/$matc/$anhmc");
-    $query = "INSERT INTO `diemrl`(`username`,`hoten`, `malop`, `matc`,`thanhtich`,`diem`,`hocki`, `anhmc`) VALUES ('$username','$hoten','$malop','$matc','$thanhtich','$diem','$hocki','$anhmc')";
+    $query = "INSERT INTO `diemrl`(`username`,`hoten`, `malop`, `matc`,`thanhtich`,`diem`,`hocki`, `anhmc`, `trangthai`) VALUES ('$username','$hoten','$malop','$matc','$thanhtich','$diem','$hocki','$anhmc','ĐỢI GVCN XÁC NHẬN')";
     $run = mysqli_query($con,$query);
     
    
@@ -44,7 +46,7 @@ $username= $_SESSION['username'];
 
       <!-- The Coding Has Been Started From Here -->
 
-      <nav class="teal">
+      <nav class="orange darken-3">
         <div class="container">
           <div class="nav-wrapper">
             <a href="" class="brand-logo center">Trường THPT Chuyên Quốc Học</a>
@@ -74,28 +76,7 @@ $username= $_SESSION['username'];
               ?> </h5>
             </span>
               <form action="" method="POST" enctype="multipart/form-data">
-							<div class="input-field">
-								 
-									<i class="material-icons prefix">class</i>
-									<select name="malop" required="required">
-									<option value="">Chọn lớp</option>
-									<?php
-										$query = "SELECT * FROM `lop`" ;
-										$urun = mysqli_query($con,$query);											
-									
-										while($data= mysqli_fetch_assoc($urun)){
-										
-										$malop = $data['malop'];
-										$tenlop = $data['tenlop'];
-										$namhoc = $data['namhoc'];
-
-									?>
-									
-									<option value="<?php echo $malop; ?>"><?php echo $malop  ?></option>
-									 <?php } ?>
-									<label for="malop">Lớp</label>
-									</select>
-								</div>
+							
 								<div class="input-field">
                                         <i class="material-icons prefix">school</i>
                                          <select name="hocki" required="required">
@@ -157,7 +138,7 @@ $username= $_SESSION['username'];
 
                     </div>
                      
-                    <button type="submit" name="submit" style="width:100%" class="btn">NHẬP ĐIỂM RÈN LUYỆN</button>
+                    <button type="submit" name="submit" style="width:100%" class="red darken-3 btn">NHẬP ĐIỂM RÈN LUYỆN</button>
                 </div>
               </form>
 

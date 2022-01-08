@@ -131,8 +131,15 @@ if(isset($_GET['editlopid']))
 
 <?php
 // Coding To Fetch All lop Details
+$username= $_SESSION['username'];
+$sql="SELECT * FROM `users` where username='$username' ";
+$run = mysqli_query($con,$sql);
+while($row6 = mysqli_fetch_assoc($run)) 
+      {
+          $malop=$row6['malop'];
+      }
 
-$query = "SELECT * FROM `tongdiem`";
+$query = "SELECT * FROM `tongdiem` where malop='$malop' ";
 $run = mysqli_query($con,$query);
 $count = 0;
 
@@ -206,7 +213,7 @@ $count = 0;
       
       <!-- The Navbar Menu Collection List -->
       <?php
-require_once('../include/sidenav.php');
+require_once('../include/gvsidenav.php');
 ?>
 
       <?php

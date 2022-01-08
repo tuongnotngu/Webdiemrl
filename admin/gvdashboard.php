@@ -15,7 +15,7 @@ $run = mysqli_query($con,$query);
 ?>
       <!-- The Coding Has Been Started From Here -->
 
-      <nav class="orange darken-3">
+      <nav class="teal">
         <div class="container">
           <div class="nav-wrapper">
             <a href="" class="brand-logo center">Trường THPT Chuyên Quốc Học</a>
@@ -28,31 +28,28 @@ $run = mysqli_query($con,$query);
       <!-- The Dashboard Coding Started From Here -->
 
       <div class="row main">
+	  <?php  while($data = mysqli_fetch_assoc($run)){ ?>
 	  
-		<div class="col m12 s12 l3">
+        <div class="col m12 s12 l3">
           <div class="card">
-            <div class="card-content yellow darken-3 black-text">
-              <b>Nhập điểm rèn luyện</b>
+            <div class="card-content blue lighten-3 white-text">
+              <h6> <b><?php echo $data['tencd']; ?></b> </h6>
+              
             </div>
-            <div class=" center card-action red darken-2 black-text" >
-           <a href="themdiemrl.php">Truy cập <i class="material-icons tiny" >open_in_new</i></a>
+            <div class=" center card-action blue lighten-2 white-text" >
+			
+           <a href="udsbaitap.php?id=<?php echo $data['macd']; ?>&user=<?php echo $_SESSION['username']; ?>&tencd=<?php echo $data['tencd']; ?>">More Information <i class="material-icons tiny" >open_in_new</i></a>
             </div>
           </div>
         </div>
-		<div class="col m12 s12 l3">
-          <div class="card">
-            <div class="card-content yellow darken-3 black-text">
-              <b>Tổng điểm</b>
-            </div>
-            <div class=" center card-action red darken-2 black-text" >
-           <a href="tongdiemhs.php">Truy cập <i class="material-icons tiny" >open_in_new</i></a>
-            </div>
+     
+	  <?php }?>
 	  
 	   </div>
 
       <!-- The Navbar Menu Collection List -->
       <?php
-require_once('../include/usidenav.php');
+require_once('../include/gvsidenav.php');
 ?>
 
       <?php

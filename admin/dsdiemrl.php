@@ -1,25 +1,148 @@
 <?php
-require_once('../include/dbcon.php');
-require_once('../include/header.php');
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "webdiemrl";
 
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+$diemhrlk1=0;
+$diemrlhk2=0;
+
+$diemvphk1=0;
+$diemvphk2=0;
+
+$sql = "SELECT username, hoten ,malop FROM users where quyen=1";
+$result = mysqli_query($conn, $sql);
+$count=0;
+if (mysqli_num_rows($result) > 0)
+{
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) 
+  {
+    $diemhk1=0;
+    $diemhk2=0;
+
+    $diemrlhk1=0;
+    $diemrlhk2=0;
+
+    $diemvphk1=0;
+    $diemvphk2=0;
+
+    $count++;
+    $id=$count;
+    $username= $row["username"];
+    $hoten=$row["hoten"];
+    $malop=$row["malop"];
+
+    $sql = "SELECT diem from diemrl where username= '$username' and hocki=1 ";
+    $result1 = mysqli_query($conn, $sql);
+    while($row1 = mysqli_fetch_assoc($result1)) 
+      {
+        $diemrlhk1=$diemhk1+$row1['diem'];
+      }
+
+    $sql = "SELECT diem from diemrl where username= '$username' and hocki=2 ";
+    $result2 = mysqli_query($conn, $sql);
+    while($row2 = mysqli_fetch_assoc($result2)) 
+      {
+        $diemrlhk2=$diemhk2+$row2['diem'];
+      }
+
+    $sql = "SELECT diem from diemvp where username= '$username' and hocki=1 ";
+    $result1 = mysqli_query($conn, $sql);
+    while($row1 = mysqli_fetch_assoc($result1)) 
+      {
+          $diemvphk1=$diemvphk1+$row1['diem'];
+      }
+  
+    $sql = "SELECT diem from diemvp where username= '$username' and hocki=2 ";
+    $result2 = mysqli_query($conn, $sql);
+    while($row2 = mysqli_fetch_assoc($result2)) 
+      {
+          $diemvphk2=$diemvphk2+$row2['diem'];
+      }
+     
+      
+    $sql = " SELECT * FROM tongdiem WHERE 1";
+    $result3 = mysqli_query($conn, $sql);
+    $row3 = mysqli_fetch_assoc($result3);
+    $diemhk1=100+$diemrlhk1-$diemvphk1;
+    $diemhk2=100+$diemrlhk2-$diemvphk2;
+    //$row=$row+$row;
+    if(2*mysqli_num_rows($result) > mysqli_num_rows($result3))
+    {
+      $diemhk1=100+$diemrlhk1-$diemvphk1;
+      $diemhk2=100+$diemrlhk2-$diemvphk2;
+      $sql="INSERT INTO `tongdiem` (`id`, `username`, `hoten`, `malop`, `hocki`) VALUES ('$count','$username','$hoten','$malop',1)";
+      mysqli_query($conn, $sql);
+      $sql="INSERT INTO `tongdiem`(`id`, `username`, `hoten`, `malop`, `hocki`) VALUES ('$count','$username','$hoten','$malop',2)";
+      mysqli_query($conn, $sql);
+      $sql="UPDATE `tongdiem` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
+      mysqli_query($conn, $sql);
+      $sql="UPDATE `tongdiem` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
+      mysqli_query($conn, $sql);
+    }
+    else
+    {
+    $sql="UPDATE `tongdiemv` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
+    mysqli_query($conn, $sql);
+    $sql="UPDATE `tongdiemrl` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
+    mysqli_query($conn, $sql);
+    }
+    
+  }
+} else {
+  echo "0 results";
+}
+
+mysqli_close($conn);
+?>
+<?php
+require_once('../include/header.php');
+require_once('../include/dbcon.php');
 ?>
 
 <head>
 	<link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 </head>
 
-<?php
+<!-- Checking That EditlopId Session Is Setted Or Not, If Setted Then It Will Redirect To The Edit lop Paqge -->
 
-$query = "select * from diemrl";
+<?php
+if(isset($_SESSION['editclassid'])){
+  header("LOCATION:editlop.php");
+}
+?>
+
+<!-- Creating A Session For EditlopId -->
+<?php
+if(isset($_GET['editlopid']))
+{
+  $editlopid = $_GET['editlopid'];
+  $_SESSION['editlopid'] = $editlopid;
+}
+?>
+
+<?php
+// Coding To Fetch All lop Details
+$username= $_SESSION['username'];
+$query = "SELECT * FROM `tongdiem` where username='$username' ";
 $run = mysqli_query($con,$query);
+$count = 0;
 
 ?>
+
       <!-- The Coding Has Been Started From Here -->
 
-      <nav class="teal">
+      <nav class="red darken-2">
         <div class="container">
           <div class="nav-wrapper">
-            <a href="" class="brand-logo center">Trường THPT Chuyên Quốc Học</a>
+            <a href="" class="brand-logo center">Trường THPT CHUYÊN QUỐC HỌC</a>
             <a href="" class="sidenav-trigger show-on-large" data-target="slide-out"><i class="material-icons">menu</i></a>
           </div>        
         </div>
@@ -28,75 +151,64 @@ $run = mysqli_query($con,$query);
 
       <!-- The Dashboard Coding Started From Here -->
 
-        <div class="row main">
-            <div class="col l12 m12 s12">
-                <div class="card">
-                    <ul class="collection">
-                        <li class="collection-item">
-                        <table class="striped" id="myTable">
-                            <tr class="cyan lighten-2 z-depth-1">
-                                <th>STT</th>
-                                
-                                <th>Mã tiêu chí</th>
-								                <th>Thành tích</th>
-							                 	<th>Học Kì</th>
-                                <th>Số điểm</th>
-                                <th>File ảnh minh chứng</th>
-								                <th>Tùy chọn</th>
+      <div class="main">
+	  
+              <div class="card-panel center"><h5>Danh sách tổng điểm </h5>
+          <card-title>
+          </card-title>
+          <div class="card-content">
+            <table class="striped " id ="myTable">
+              <thead>
+                <tr>
+              <th>STT</th>
+              <th>Tên đăng nhập</th>
+			  <th>Họ và tên</th>
+			  <th>Mã lớp</th>
+			  <th>Học kì</th>
+			  <th>Điểm</th>
+			 
+            </tr>
+            
+            </thead>
+            <tbody>
+              
+                  <?php while($data= mysqli_fetch_assoc($run)){
+                    $count++;
+                    $username = $data['username'];
+                    $hoten = $data['hoten'];
+					$malop = $data['malop'];
+					$hocki = $data['hocki'];
+					$diem = $data['diem'];
+                    
 
-                            </tr>
-                            
-                                <?php
-                                $count=0;
-                                    while($data = mysqli_fetch_assoc($run)){
-                                            $count++;
-                                            $anhmc = $data['anhmc'];
-                                            $matc = $data['matc'];
-                                            $thanhtich = $data['thanhtich'];
-                                            $hocki = $data['hocki'];
-											                      $diem = $data['diem'];
-                                            
-                                    
-                                ?>
-
-                                <tr>
-                                    <td> <?php echo $count; ?> </td>
-                                    
-                                    <td><?php echo $matc; ?></td>
-									<td><?php echo $thanhtich; ?></td>
-                                    <td><?php echo $hocki; ?></td>
-                                    <td><?php echo $diem; ?></td>
-                                    <td> <a href="../DIEMRL/<?php echo $matc; ?>/<?php
-                                    if (isset($anhmc) && !empty($anhmc)){
-                                     echo $anhmc;
-                                    }
-                                    else
-                                    {
-                                      echo "user.png";
-                                    }
-                                      ?>" > <?php  echo $anhmc; ?> </td>
-									<td> 
-									  <a href="editbaitap.php?id=<?php echo $id; ?>" class=" green-text waves-light"> <i class="material-icons">mode_edit</i></a>  &nbsp;
-									  <a href="deletebaitap.php?id=<?php echo $id; ?>" class=" red-text waves-light"  > <i class="material-icons">delete</i></a> 
-									  <!--**********************New Testing Coding Started*****************************-->
-									</td>
-                                    </tr>
-                                <?php } ?>
-                            
-                        </table>
-                    </li>
-                    </ul>
+                ?>
+                <tr>
+                <td> <?php echo $count; ?> </td>
+                <td> <?php echo $username; ?> </td>
+                <td> <?php echo $hoten; ?> </td>
+				<td> <?php echo $malop; ?> </td>
+				<td> <?php echo $hocki; ?> </td>
+				<td> <?php echo $diem; ?> </td>
+               
+                </tr>
+                  <?php } ?>
+            </tbody>
+            </table>
                 </div>
-            </div>
         </div>
+      </div>
 
+
+
+
+
+      
       <!-- The Navbar Menu Collection List -->
-<?php
-
+      <?php
 require_once('../include/usidenav.php');
 ?>
-                   
-<?php
+
+      <?php
 require_once('../include/footer.php');
 ?>
 

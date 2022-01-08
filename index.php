@@ -33,8 +33,16 @@ require_once('include/login_header.php');
 		//echo $quyen;
 		if ($quyen=='3')  
 			header("location:admin/dashboard.php");
-		else 
-			header("location:admin/udashboard.php");
+		else
+        {
+            if($quyen=='2')
+            {
+                header("location:admin/gvdashboard.php");
+            }
+            else
+            header("location:admin/udashboard.php");
+        }
+			
     }
 }
 ?>

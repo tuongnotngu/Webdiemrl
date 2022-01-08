@@ -10,10 +10,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-$diemhk1=0;
-$diemhk2=0;
-
-$diemrlhk1=0;
+$diemhrlk1=0;
 $diemrlhk2=0;
 
 $diemvphk1=0;
@@ -30,11 +27,12 @@ if (mysqli_num_rows($result) > 0)
     $diemhk1=0;
     $diemhk2=0;
 
-    $diemrlhk1=0;
-    $diemrlhk2=0;
+    $diemhrlk1=0;
+    $diemhrlk2=0;
 
     $diemvphk1=0;
     $diemvphk2=0;
+
     $count++;
     $id=$count;
     $username= $row["username"];
@@ -45,40 +43,41 @@ if (mysqli_num_rows($result) > 0)
     $result1 = mysqli_query($conn, $sql);
     while($row1 = mysqli_fetch_assoc($result1)) 
       {
-        $diemrlhk1=$diemrlhk1+$row1['diem'];
+        $diemrlhk1=$diemhk1+$row1['diem'];
       }
 
     $sql = "SELECT diem from diemrl where username= '$username' and hocki=2 ";
     $result2 = mysqli_query($conn, $sql);
     while($row2 = mysqli_fetch_assoc($result2)) 
       {
-        $diemrlhk2=$diemrlhk2+$row2['diem'];
+        $diemrlhk2=$diemhk2+$row2['diem'];
       }
+
     $sql = "SELECT diem from diemvp where username= '$username' and hocki=1 ";
-    $result3 = mysqli_query($conn, $sql);
-    while($row3 = mysqli_fetch_assoc($result3)) 
+    $result1 = mysqli_query($conn, $sql);
+    while($row1 = mysqli_fetch_assoc($result1)) 
       {
-          $diemvphk1=$diemvphk1+$row3['diem'];
+          $diemvphk1=$diemvphk1+$row1['diem'];
       }
   
     $sql = "SELECT diem from diemvp where username= '$username' and hocki=2 ";
-    $result4 = mysqli_query($conn, $sql);
-    while($row4 = mysqli_fetch_assoc($result4)) 
+    $result2 = mysqli_query($conn, $sql);
+    while($row2 = mysqli_fetch_assoc($result2)) 
       {
-          $diemvphk2=$diemvphk2+$row4['diem'];
+          $diemvphk2=$diemvphk2+$row2['diem'];
       }
-
+     
+      
     $sql = " SELECT * FROM tongdiem WHERE 1";
-    $result5 = mysqli_query($conn, $sql);
-    $row5 = mysqli_fetch_assoc($result5);
-
+    $result3 = mysqli_query($conn, $sql);
+    $row3 = mysqli_fetch_assoc($result3);
     $diemhk1=100+$diemrlhk1-$diemvphk1;
     $diemhk2=100+$diemrlhk2-$diemvphk2;
     //$row=$row+$row;
-    //2*mysqli_num_rows($result) > mysqli_num_rows($result5)
-    //$dong=0;
-    if(mysqli_num_rows($result5)<2*mysqli_num_rows($result))
+    if(2*mysqli_num_rows($result) > mysqli_num_rows($result3))
     {
+      $diemhk1=100+$diemrlhk1-$diemvphk1;
+      $diemhk2=100+$diemrlhk2-$diemvphk2;
       $sql="INSERT INTO `tongdiem` (`id`, `username`, `hoten`, `malop`, `hocki`) VALUES ('$count','$username','$hoten','$malop',1)";
       mysqli_query($conn, $sql);
       $sql="INSERT INTO `tongdiem`(`id`, `username`, `hoten`, `malop`, `hocki`) VALUES ('$count','$username','$hoten','$malop',2)";
@@ -88,11 +87,11 @@ if (mysqli_num_rows($result) > 0)
       $sql="UPDATE `tongdiem` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
       mysqli_query($conn, $sql);
     }
-    if(mysqli_num_rows($result5)==2*mysqli_num_rows($result))
+    else
     {
-    $sql="UPDATE `tongdiem` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
+    $sql="UPDATE `tongdiemv` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
     mysqli_query($conn, $sql);
-    $sql="UPDATE `tongdiem` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
+    $sql="UPDATE `tongdiemrl` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
     mysqli_query($conn, $sql);
     }
     
@@ -140,7 +139,7 @@ $count = 0;
 
       <!-- The Coding Has Been Started From Here -->
 
-      <nav class="red darken-2">
+      <nav class="orange darken-3">
         <div class="container">
           <div class="nav-wrapper">
             <a href="" class="brand-logo center">Trường THPT CHUYÊN QUỐC HỌC</a>
@@ -154,7 +153,7 @@ $count = 0;
 
       <div class="main">
 	  
-              <div class="card-panel center"><h5>Danh sách tổng điểm </h5>
+              <div class="card-panel center"><h5>Danh sách tổng điểm</h5>
           <card-title>
           </card-title>
           <div class="card-content">
@@ -167,7 +166,7 @@ $count = 0;
 			  <th>Mã lớp</th>
 			  <th>Học kì</th>
 			  <th>Điểm</th>
-			 
+			  
             </tr>
             
             </thead>
@@ -190,7 +189,8 @@ $count = 0;
 				<td> <?php echo $malop; ?> </td>
 				<td> <?php echo $hocki; ?> </td>
 				<td> <?php echo $diem; ?> </td>
-               
+                
+                
                 </tr>
                   <?php } ?>
             </tbody>
@@ -206,7 +206,7 @@ $count = 0;
       
       <!-- The Navbar Menu Collection List -->
       <?php
-require_once('../include/sidenav.php');
+require_once('../include/usidenav.php');
 ?>
 
       <?php

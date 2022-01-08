@@ -28,14 +28,14 @@ if (mysqli_num_rows($result) > 0)
     $hoten=$row["hoten"];
     $malop=$row["malop"];
 
-    $sql = "SELECT diem from diemrl where username= '$username' and hocki=1 ";
+    $sql = "SELECT diem from diemrl where username= '$username' and hocki=1 and trangthai='ĐÃ XÁC NHẬN' ";
     $result1 = mysqli_query($conn, $sql);
     while($row1 = mysqli_fetch_assoc($result1)) 
       {
         $diemhk1=$diemhk1+$row1['diem'];
       }
 
-    $sql = "SELECT diem from diemrl where username= '$username' and hocki=2 ";
+    $sql = "SELECT diem from diemrl where username= '$username' and hocki=2 and trangthai='ĐÃ XÁC NHẬN' ";
     $result2 = mysqli_query($conn, $sql);
     while($row2 = mysqli_fetch_assoc($result2)) 
       {
@@ -60,7 +60,7 @@ if (mysqli_num_rows($result) > 0)
     }
     else
     {
-    $sql="UPDATE `tongdiemvrl` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
+    $sql="UPDATE `tongdiemrl` SET `diem`='$diemhk1' WHERE username= '$username' and hocki=1";
     mysqli_query($conn, $sql);
     $sql="UPDATE `tongdiemrl` SET `diem`='$diemhk2' WHERE username= '$username' and hocki=2";
     mysqli_query($conn, $sql);
@@ -73,3 +73,121 @@ if (mysqli_num_rows($result) > 0)
 
 mysqli_close($conn);
 ?>
+<?php
+require_once('../include/header.php');
+require_once('../include/dbcon.php');
+?>
+
+<head>
+	<link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+</head>
+
+<!-- Checking That EditlopId Session Is Setted Or Not, If Setted Then It Will Redirect To The Edit lop Paqge -->
+
+<?php
+if(isset($_SESSION['editclassid'])){
+  header("LOCATION:editlop.php");
+}
+?>
+
+<!-- Creating A Session For EditlopId -->
+<?php
+if(isset($_GET['editlopid']))
+{
+  $editlopid = $_GET['editlopid'];
+  $_SESSION['editlopid'] = $editlopid;
+}
+?>
+
+<?php
+// Coding To Fetch All lop Details
+
+$query = "SELECT * FROM `tongdiemrl`";
+$run = mysqli_query($con,$query);
+$count = 0;
+
+?>
+
+      <!-- The Coding Has Been Started From Here -->
+
+      <nav class="orange darken-3">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="" class="brand-logo center">Trường THPT CHUYÊN QUỐC HỌC</a>
+            <a href="" class="sidenav-trigger show-on-large" data-target="slide-out"><i class="material-icons">menu</i></a>
+          </div>        
+        </div>
+      </nav>
+
+
+      <!-- The Dashboard Coding Started From Here -->
+
+      <div class="main">
+	  
+              <div class="card-panel center"><h5>Danh sách tổng điểm rèn luyện</h5>
+          <card-title>
+          </card-title>
+          <div class="card-content">
+            <table class="striped " id ="myTable">
+              <thead>
+                <tr>
+              <th>STT</th>
+              <th>Tên đăng nhập</th>
+			  <th>Họ và tên</th>
+			  <th>Mã lớp</th>
+			  <th>Học kì</th>
+			  <th>Điểm</th>
+			  
+            </tr>
+            
+            </thead>
+            <tbody>
+              
+                  <?php while($data= mysqli_fetch_assoc($run)){
+                    $count++;
+                    $username = $data['username'];
+                    $hoten = $data['hoten'];
+					$malop = $data['malop'];
+					$hocki = $data['hocki'];
+					$diem = $data['diem'];
+                    
+
+                ?>
+                <tr>
+                <td> <?php echo $count; ?> </td>
+                <td> <?php echo $username; ?> </td>
+                <td> <?php echo $hoten; ?> </td>
+				<td> <?php echo $malop; ?> </td>
+				<td> <?php echo $hocki; ?> </td>
+				<td> <?php echo $diem; ?> </td>
+                
+                
+                </tr>
+                  <?php } ?>
+            </tbody>
+            </table>
+                </div>
+        </div>
+      </div>
+
+
+
+
+
+      
+      <!-- The Navbar Menu Collection List -->
+      <?php
+require_once('../include/sidenav.php');
+?>
+
+      <?php
+require_once('../include/footer.php');
+?>
+
+<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#myTable').DataTable();
+
+    });
+  </script>

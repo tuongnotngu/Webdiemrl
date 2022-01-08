@@ -13,8 +13,8 @@ $image = $data['image'];
 
 <ul class="sidenav collapsible sidenav-fixed" id="slide-out">
         <li>
-            <div class="background">
-              <img src="../images/quochoc9.jpg" class="responsive-img" alt="">
+            <div class="avatar">
+              <img src="../images/logo.jpg" class="responsive-img" alt="">
             </div>
             
            <b> <span class="hoten red-text"><i class="material-icons">person</i><?php echo $hoten; ?></span></b>
@@ -37,8 +37,29 @@ $image = $data['image'];
             <ul>
                <ul>
               <li>
-              <li><a href="themdiemrl.php"><i class="material-icons">tasks</i>Thêm điểm</a></li>
-              <li><a href="dsdiemrl.php"><i class="material-icons">tasks</i>Danh sách điểm</a></li>
+              <li><a href="themdiemrl.php"><i class="material-icons">edit</i>Thêm điểm</a></li>
+              <li><a href="dsdiemrl.php"><i class="material-icons">list</i>Danh sách điểm</a></li>
+              </li>
+            </ul>
+            </ul>
+          </div>
+        </li>
+		<li>
+          <div class="collapsible-header">
+            <ul>
+              <ul>
+              <li>
+              <i class=" collapsible-header material-icons">school</i> <span style="margin-left:25px;">Xem điểm</span>  <i class="material-icons right prefix" style="margin-right:0; margin-left:80px;">arrow_drop_down</i>
+              </li>
+            </ul>
+            </ul>
+          </div>
+          <div class="collapsible-body">
+            <ul>
+               <ul>
+              <li>
+              <li><a href="tongdiemrlhs.php"><i class="material-icons">list</i>Tổng điểm rèn luyện</a></li>
+              <li><a href="tongdiemhs.php"><i class="material-icons">list</i>Tổng điểm</a></li>
               </li>
             </ul>
             </ul>
@@ -46,6 +67,6 @@ $image = $data['image'];
         </li>
 		
         <div class="divider"></div>
-        <li><a href="../include/logout.php"><i class="material-icons">logout</i>Logout</a></li>
+        <li><a href="../include/logout.php"><i class="material-icons">logout</i>Đăng xuất</a></li>
 
       </ul>

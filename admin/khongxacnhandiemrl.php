@@ -1,4 +1,19 @@
 <?php
+require_once('../include/header.php');
+require_once('../include/dbcon.php');
+?>
+
+<?php
+
+    //Selecting Data Form Database For Print, Using GET Method ID
+
+    $id = $_GET['id'];
+    $sql="UPDATE `diemrl` SET `trangthai`='KHÔNG XÁC NHẬN' WHERE id='$id'";
+    mysqli_query($con,$sql);
+?>
+
+
+<?php
 require_once('../include/dbcon.php');
 require_once('../include/header.php');
 
@@ -10,7 +25,7 @@ require_once('../include/header.php');
 
 <?php
 
-$query = "select * from users";
+$query = "select * from diemrl";
 $run = mysqli_query($con,$query);
 
 ?>
@@ -35,53 +50,58 @@ $run = mysqli_query($con,$query);
                         <li class="collection-item">
                         <table class="striped" id="myTable">
                             <tr class="cyan lighten-2 z-depth-1">
-                                <th>Sr. No</th>
-                                <th>Ảnh</th>
-                                <th>Họ và tên</th>
-                                <th>Username</th>
-                                <th>Password</th>
-                                <th>Ngày Sinh</th>
-                                <th>Mã lớp</th>
-								<th>Quyền</th>
-								<th>Action</th>
+                                <th>STT</th>
+                                <th>Họ Tên</th>
+                                <th>Mã tiêu chí</th>
+							    <th>Thành tích</th>
+							    <th>Học Kì</th>
+                                <th>Số điểm</th>
+                                <th>File ảnh minh chứng</th>
+                                <th>Trạng Thái</th>
+								<th>Xét Duyệt</th>
+
                             </tr>
                             
                                 <?php
                                 $count=0;
                                     while($data = mysqli_fetch_assoc($run)){
                                             $count++;
-                                            $image = $data['image'];
+                                            $id=$data['id'];
+                                            $username=$data['username'];
                                             $hoten = $data['hoten'];
-                                            $ngaysinh = $data['ngaysinh'];
-                                            $username = $data['username'];
-                                            $password = $data['password'];
-                                            $malop  = $data['malop'];
-                                            $quyen = $data['quyen'];
-										                      	$id = $data['id'];
+                                            $anhmc = $data['anhmc'];
+                                            $matc = $data['matc'];
+                                            $thanhtich = $data['thanhtich'];
+                                            $hocki = $data['hocki'];
+                                            $trangthai=$data['trangthai'];  
+											$diem = $data['diem'];
                                             
                                     
-                                ?><tr>
+                                ?>
+
+                                <tr>
                                     <td> <?php echo $count; ?> </td>
-                                    <td> <img src="../userimg/<?php
-                                    if (isset($image) && !empty($image)){
-                                     echo $image;
+                                    <td> <?php echo $hoten; ?> </td>
+                                    <td><?php echo $matc; ?></td>
+									                  <td><?php echo $thanhtich; ?></td>
+                                    <td><?php echo $hocki; ?></td>
+                                    <td><?php echo $diem; ?></td>
+                                    <td> <a href="../DIEMRL/<?php echo $matc; ?>/<?php
+                                    if (isset($anhmc) && !empty($anhmc)){
+                                     echo $anhmc;
                                     }
                                     else
                                     {
                                       echo "user.png";
                                     }
-                                      ?>" class="responsive-img circle" style="width: 100px;"> </td>
-                                    <td><?php echo $hoten; ?></td>
-                                    <td><?php echo $username; ?></td>
-                                    <td><?php echo $password; ?></td>
-									<td><?php echo $ngaysinh; ?></td>
-                                    <td><?php echo $malop; ?></td>
-                                    <td><?php echo $quyen; ?></td>
+                                      ?>" > <?php  echo $anhmc; ?> </td>
+                                   <td><?php echo $trangthai ?></td>
 									<td> 
-									  <a href="edituser.php?id=<?php echo $id; ?>" class=" green-text waves-light"> <i class="material-icons">mode_edit</i></a>  &nbsp;
-									  <a href="deleteuser.php?id=<?php echo $id; ?>" class=" red-text waves-light"  > <i class="material-icons">delete</i></a> 
+                                        <a href="xacnhandiemrl.php?id=<?php echo $id; ?>"><i class="material-icons">mode_edit</i></a>
+                                        <a href="khongxacnhandiemrl.php?id=<?php echo $id; ?>"><i class="material-icons">delete</i></a>
 									  <!--**********************New Testing Coding Started*****************************-->
 									</td>
+
                                     </tr>
                                 <?php } ?>
                             
@@ -95,7 +115,7 @@ $run = mysqli_query($con,$query);
       <!-- The Navbar Menu Collection List -->
 <?php
 
-require_once('../include/sidenav.php');
+require_once('../include/gvsidenav.php');
 ?>
                    
 <?php

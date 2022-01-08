@@ -12,8 +12,9 @@ $image = $data['image'];
 
 <ul class="sidenav collapsible sidenav-fixed" id="slide-out">
         <li>
-            <div class="background">
-              <img src="../images/quochoc.jpg" class="responsive-img" alt="">
+            <div class="avatar">
+              <img src="../images/logo.jpg" class="responsive-img" alt="">
+			  <b> <span class="hoten red-text"><i class="material-icons"></i><?php echo "  Đoàn trường THPT Chuyên Quốc Học"; ?></span></b>
             </div>
         </li>
         <li><a href="dashboard.php"><i class="material-icons">home</i>Trang chủ</a></li>
@@ -113,8 +114,8 @@ $image = $data['image'];
 		<li>
         </li>
         <div class="divider"></div>
-        <li><a href="../include/logout.php"><i class="material-icons">logout</i>Logout</a></li>
+        <li><a href="../include/logout.php"><i class="material-icons">logout</i>Đăng xuất</a></li>
         
-        <li><a href="contact.php"><i class="material-icons">call</i>Contact Us</a></li>
+        <li><a href="contact.php"><i class="material-icons">information</i>Thông tin</a></li>
 
       </ul>
